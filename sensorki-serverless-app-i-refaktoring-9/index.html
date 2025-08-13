@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<title>Sensorki &ndash; Serverless app i refaktoring &ndash; #9 &ndash; Paulina's sandbox</title>
+<meta name="robots" content="max-image-preview:large">
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	<link rel="dns-prefetch" href="//secure.gravatar.com">
+<link rel="dns-prefetch" href="//stats.wp.com">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//v0.wordpress.com">
+<link rel="dns-prefetch" href="//widgets.wp.com">
+<link rel="dns-prefetch" href="//s0.wp.com">
+<link rel="dns-prefetch" href="//0.gravatar.com">
+<link rel="dns-prefetch" href="//1.gravatar.com">
+<link rel="dns-prefetch" href="//2.gravatar.com">
+<link rel="preconnect" href="//i0.wp.com">
+<link rel="alternate" type="application/rss+xml" title="Paulina's sandbox &raquo; Kana&#322; z wpisami" href="/feed/">
+<link rel="alternate" type="application/rss+xml" title="Paulina's sandbox &raquo; Kana&#322; z komentarzami" href="/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Paulina's sandbox &raquo; Sensorki &ndash; Serverless app i refaktoring &ndash; #9 Kana&#322; z komentarzami" href="/sensorki-serverless-app-i-refaktoring-9/feed/">
+<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.7.3"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\u2b1b","\ud83d\udc26\u200b\u2b1b")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<link rel="stylesheet" id="jetpack_related-posts-css" href="/wp-content/plugins/jetpack/modules/related-posts/related-posts.css?ver=20240116" type="text/css" media="all">
+<style id="wp-emoji-styles-inline-css" type="text/css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel="stylesheet" id="wp-block-library-css" href="/wp-content/plugins/gutenberg/build/block-library/style.css?ver=21.3.0" type="text/css" media="all">
+<style id="pdfemb-pdf-embedder-viewer-style-inline-css" type="text/css">
+.wp-block-pdfemb-pdf-embedder-viewer{max-width:none}
+
+</style>
+<link rel="stylesheet" id="mediaelement-css" href="/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css?ver=4.2.17" type="text/css" media="all">
+<link rel="stylesheet" id="wp-mediaelement-css" href="/wp-includes/js/mediaelement/wp-mediaelement.min.css?ver=6.7.3" type="text/css" media="all">
+<style id="jetpack-sharing-buttons-style-inline-css" type="text/css">
+.jetpack-sharing-buttons__services-list{display:flex;flex-direction:row;flex-wrap:wrap;gap:0;list-style-type:none;margin:5px;padding:0}.jetpack-sharing-buttons__services-list.has-small-icon-size{font-size:12px}.jetpack-sharing-buttons__services-list.has-normal-icon-size{font-size:16px}.jetpack-sharing-buttons__services-list.has-large-icon-size{font-size:24px}.jetpack-sharing-buttons__services-list.has-huge-icon-size{font-size:36px}@media print{.jetpack-sharing-buttons__services-list{display:none!important}}.editor-styles-wrapper .wp-block-jetpack-sharing-buttons{gap:0;padding-inline-start:0}ul.jetpack-sharing-buttons__services-list.has-background{padding:1.25em 2.375em}
+</style>
+<style id="classic-theme-styles-inline-css" type="text/css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id="global-styles-inline-css" type="text/css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+</style>
+<link rel="stylesheet" id="styles-css" href="/wp-content/plugins/simple-cookie-notice/styles.css?ver=6.7.3" type="text/css" media="all">
+<link rel="stylesheet" id="orgseries-default-css-css" href="/wp-content/plugins/organize-series/orgSeries.css?ver=6.7.3" type="text/css" media="all">
+<link rel="stylesheet" id="ioboot-bootstrap-css" href="/wp-content/themes/ioboot/css/bootstrap.css?ver=6.7.3" type="text/css" media="all">
+<link rel="stylesheet" id="dashicons-css" href="/wp-includes/css/dashicons.min.css?ver=6.7.3" type="text/css" media="all">
+<link rel="stylesheet" id="ioboot-style-css" href="/wp-content/themes/ioboot/style.css?ver=6.7.3" type="text/css" media="all">
+<link rel="stylesheet" id="ioboot-font-css" href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed%3A400%2C700&amp;ver=6.7.3" type="text/css" media="all">
+<link rel="stylesheet" id="jetpack_likes-css" href="/wp-content/plugins/jetpack/modules/likes/style.css?ver=14.9.1" type="text/css" media="all">
+<link rel="stylesheet" id="sharedaddy-css" href="/wp-content/plugins/jetpack/modules/sharedaddy/sharing.css?ver=14.9.1" type="text/css" media="all">
+<link rel="stylesheet" id="social-logos-css" href="/wp-content/plugins/jetpack/_inc/social-logos/social-logos.min.css?ver=14.9.1" type="text/css" media="all">
+<script type="text/javascript" id="jetpack_related-posts-js-extra">
+/* <![CDATA[ */
+var related_posts_js_options = {"post_heading":"h4"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wp-content/plugins/jetpack/_inc/build/related-posts/related-posts.min.js?ver=20240116" id="jetpack_related-posts-js"></script>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<link rel="https://api.w.org/" href="/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="/wp-json/wp/v2/posts/3550"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 6.7.3">
+<link rel="canonical" href="/sensorki-serverless-app-i-refaktoring-9/">
+<link rel="shortlink" href="https://wp.me/p9JLRk-Vg">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2Fsensorki-serverless-app-i-refaktoring-9%2F">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2Fsensorki-serverless-app-i-refaktoring-9%2F&amp;format=xml">
+	<style>img#wpstats{display:none}</style>
+		<link rel="pingback" href="/xmlrpc.php"><style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Sensorki &ndash; Serverless app i refaktoring &ndash; #9">
+<meta property="og:url" content="/sensorki-serverless-app-i-refaktoring-9/">
+<meta property="og:description" content="Postanowi&#322;am zmieni&#263; format jsona, kt&oacute;rego obrabiam na androidzie, na bardziej przyst&#281;pny. Tak powsta&#322;a aplikacja w chmurze google&rsquo;a, kt&oacute;ra pozwoli&#322;a upro&#347;ci&#263; kod.">
+<meta property="article:published_time" content="2019-02-18T06:56:34+00:00">
+<meta property="article:modified_time" content="2019-02-19T11:19:50+00:00">
+<meta property="og:site_name" content="Paulina's sandbox">
+<meta property="og:image" content="https://s0.wp.com/i/blank.jpg">
+<meta property="og:image:width" content="200">
+<meta property="og:image:height" content="200">
+<meta property="og:image:alt" content="">
+<meta property="og:locale" content="pl_PL">
+<meta name="twitter:text:title" content="Sensorki &ndash; Serverless app i refaktoring &ndash; #9">
+<meta name="twitter:card" content="summary">
+
+<!-- End Jetpack Open Graph Tags -->
+</head>
+
+<body class="post-template-default single single-post postid-3550 single-format-standard">
+<div id="page" class="site container">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+	<header id="masthead" class="site-header row">
+		<div class="site-branding col-sm-3">
+							<p class="site-title"><a href="/" rel="home">Paulina's sandbox</a></p>
+						</div><!-- .site-branding -->
+
+		<nav id="site-navigation" class="main-navigation col-sm-9"><div class="io-menu io-menu-desktop">
+			
+			<div class="menu-main_menu-container"><ul id="primary-menu" class="menu"><li id="menu-item-3377" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-3377"><a href="/">Strona g&#322;&oacute;wna</a></li>
+<li id="menu-item-3376" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3376"><a href="/o-mnie/">O mnie</a></li>
+<li id="menu-item-3383" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3383"><a href="/projekty/">Projekty</a>
+<ul class="sub-menu">
+	<li id="menu-item-3458" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-3458"><a href="/category/sensorki/">sensorki</a></li>
+	<li id="menu-item-3378" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3378"><a href="/category/conaobiad/">CoNaObiad</a></li>
+	<li id="menu-item-3379" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3379"><a href="/category/odjazd/">Odjazd</a></li>
+	<li id="menu-item-3380" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3380"><a href="/category/python-challenge/">Python challenge</a></li>
+	<li id="menu-item-3381" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3381"><a href="/category/project-euler/">project euler</a></li>
+	<li id="menu-item-3443" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3443"><a href="/category/chaos/">Chaos</a></li>
+</ul>
+</li>
+<li id="menu-item-3499" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3499"><a href="/category/bez_kodu/">Teksty bez kodu</a></li>
+</ul></div>		</div><!-- .io-menu --></nav><!-- #site-navigation -->
+	</header><!-- #masthead -->
+
+	<div id="content" class="site-content row">
+
+	<div id="primary" class="content-area col-lg-8">
+		<main id="main" class="site-main">
+
+		
+<article id="post-3550" class="post-3550 post type-post status-publish format-standard hentry category-sensorki tag-android tag-sensorki tag-moshi series-sensorki">
+	<header class="entry-header">
+		<h1 class="entry-title">Sensorki &ndash; Serverless app i refaktoring &ndash; #9</h1>			<div class="entry-meta">
+				<span class="posted-on">Posted on <a href="/sensorki-serverless-app-i-refaktoring-9/" rel="bookmark"><time class="entry-date published" datetime="2019-02-18T07:56:34+01:00">18 lutego 2019</time><time class="updated" datetime="2019-02-19T12:19:50+01:00">19 lutego 2019</time></a></span><span class="byline"> by <span class="author vcard"><a class="url fn n" href="/author/paulinakaczmarek/">paulinakaczmarek</a></span></span>			</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+
+	
+	<div class="entry-content">
+		<div class="seriesmeta">This entry is part 10 of 10 in the series <a href="/series/sensorki/" class="series-172" title="Sensorki">Sensorki</a></div><div class="seriesbox"><div class="center"><br><a href="/series/sensorki/" class="series-172" title="Sensorki">Sensorki</a></div><ul class="serieslist-ul"><li class="serieslist-li"><a href="/sensorki-aplikacja-pogodowa-0/" title="Sensorki &ndash; aplikacja &bdquo;pogodowa&rdquo; &ndash; #0">Sensorki &ndash; aplikacja &bdquo;pogodowa&rdquo; &ndash; #0</a></li> <li class="serieslist-li"><a href="/sensorki-widok-i-adapter-1/" title="Sensorki &ndash; widok i adapter &ndash; #1">Sensorki &ndash; widok i adapter &ndash; #1</a></li> <li class="serieslist-li"><a href="/sensorki-refresh-2/" title="Sensorki &ndash; refresh &ndash; #2">Sensorki &ndash; refresh &ndash; #2</a></li> <li class="serieslist-li"><a href="/sensorki-material-design-3/" title="Sensorki &ndash; material design &ndash; #3">Sensorki &ndash; material design &ndash; #3</a></li> <li class="serieslist-li"><a href="/sensorki-wskaznik-baterii-4/" title="Sensorki &ndash; wska&#378;nik baterii &ndash; #4">Sensorki &ndash; wska&#378;nik baterii &ndash; #4</a></li> <li class="serieslist-li"><a href="/sensorki-widget-5/" title="Sensorki &ndash; widget &ndash; #5">Sensorki &ndash; widget &ndash; #5</a></li> <li class="serieslist-li"><a href="/sensorki-groovy-spring-boot-demo-serwer-6/" title="Sensorki &ndash; groovy/spring boot demo serwer &ndash; #6">Sensorki &ndash; groovy/spring boot demo serwer &ndash; #6</a></li> <li class="serieslist-li"><a href="/sensorki-android-i-spock-7/" title="Sensorki &ndash; Android i Spock &ndash; #7">Sensorki &ndash; Android i Spock &ndash; #7</a></li> <li class="serieslist-li"><a href="/sensorki-podsumowanie-7/" title="Sensorki &ndash; podsumowanie &ndash; #8">Sensorki &ndash; podsumowanie &ndash; #8</a></li> <li class="serieslist-li-current">Sensorki &ndash; Serverless app i refaktoring &ndash; #9</li></ul><div class="clear"></div></div>
+<p>Postanowi&#322;am zmieni&#263; format jsona, kt&oacute;rego obrabiam na androidzie, na bardziej przyst&#281;pny. Tak powsta&#322;a aplikacja w chmurze google&rsquo;a, kt&oacute;ra pozwoli&#322;a upro&#347;ci&#263; kod.</p>
+
+
+
+<span id="more-3550"></span>
+
+
+
+<figure class="wp-block-embed is-type-rich is-provider-embed-handler"><div class="wp-block-embed__wrapper">
+<style>.gist table { margin-bottom: 0; }</style><div style="tab-size: 8" id="gist94562955" class="gist">
+    <div class="gist-file" translate="no" data-color-mode="light" data-light-theme="light">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container">
+  <div id="file-first_version-json" class="file my-2">
+    
+    <div itemprop="text" class="Box-body p-0 blob-wrapper data type-json  " style="overflow: auto" tabindex="0" role="region" aria-label="first_version.json content, created by jezinka on 03:04PM on February 10, 2019.">
+
+        
+<div class="js-check-hidden-unicode js-blob-code-container blob-code-content">
+
+  <template class="js-file-alert-template">
+  <div data-view-component="true" class="flash flash-warn flash-full d-flex flex-items-center">
+  <svg aria-hidden="true" height="16" viewbox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">
+    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
+</svg>
+    <span>
+      This file contains hidden or bidirectional Unicode text that may be interpreted or compiled differently than what appears below. To review, open the file in an editor that reveals hidden Unicode characters.
+      <a class="Link--inTextBlock" href="https://github.co/hiddenchars" target="_blank">Learn more about bidirectional Unicode characters</a>
+    </span>
+
+
+  <div data-view-component="true" class="flash-action">        <a href="/sensorki-serverless-app-i-refaktoring-9/%7B%7B%20revealButtonHref%20%7D%7D" data-view-component="true" class="btn-sm btn">    Show hidden characters
+</a>
+</div>
+</div></template>
+<template class="js-line-alert-template">
+  <span aria-label="This line has hidden Unicode characters" data-view-component="true" class="line-alert tooltipped tooltipped-e">
+    <svg aria-hidden="true" height="16" viewbox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">
+    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
+</svg>
+</span></template>
+
+  <table data-hpc class="highlight tab-size js-file-line-container" data-tab-size="4" data-paste-markdown-skip data-tagsearch-path="first_version.json">
+        <tr>
+          <td id="file-first_version-json-L1" class="blob-num js-line-number js-blob-rnum" data-line-number="1"></td>
+          <td id="file-first_version-json-LC1" class="blob-code blob-code-inner js-file-line">{</td>
+        </tr>
+        <tr>
+          <td id="file-first_version-json-L2" class="blob-num js-line-number js-blob-rnum" data-line-number="2"></td>
+          <td id="file-first_version-json-LC2" class="blob-code blob-code-inner js-file-line">  &quot;data&quot;: {</td>
+        </tr>
+        <tr>
+          <td id="file-first_version-json-L3" class="blob-num js-line-number js-blob-rnum" data-line-number="3"></td>
+          <td id="file-first_version-json-LC3" class="blob-code blob-code-inner js-file-line">    &quot;hum_temp&quot;: &quot;Temperatura (\u00b0C)&quot;,</td>
+        </tr>
+        <tr>
+          <td id="file-first_version-json-L4" class="blob-num js-line-number js-blob-rnum" data-line-number="4"></td>
+          <td id="file-first_version-json-LC4" class="blob-code blob-code-inner js-file-line">    &quot;hum_hum&quot;: &quot;Wilgotno\u015b\u0107 (%)&quot;,</td>
+        </tr>
+        <tr>
+          <td id="file-first_version-json-L5" class="blob-num js-line-number js-blob-rnum" data-line-number="5"></td>
+          <td id="file-first_version-json-LC5" class="blob-code blob-code-inner js-file-line">    &quot;bar_pres_rel&quot;: &quot;Ci\u015bnienie (hPa)&quot;,</td>
+        </tr>
+        <tr>
+          <td id="file-first_version-json-L6" class="blob-num js-line-number js-blob-rnum" data-line-number="6"></td>
+          <td id="file-first_version-json-LC6" class="blob-code blob-code-inner js-file-line">    &quot;lux&quot;: &quot;Jasno\u015b\u0107 (lx)&quot;,</td>
+        </tr>
+        <tr>
+          <td id="file-first_version-json-L7" class="blob-num js-line-number js-blob-rnum" data-line-number="7"></td>
+          <td id="file-first_version-json-LC7" class="blob-code blob-code-inner js-file-line">    &quot;vbat&quot;: &quot;Nap. baterii (V)&quot;,</td>
+        </tr>
+        <tr>
+          <td id="file-first_version-json-L8" class="blob-num js-line-number js-blob-rnum" data-line-number="8"></td>
+          <td id="file-first_version-json-LC8" class="blob-code blob-code-inner js-file-line">    &quot;vreg&quot;: &quot;Nap. sensor\u00f3w (V)&quot;</td>
+        </tr>
+        <tr>
+          <td id="file-first_version-json-L9" class="blob-num js-line-number js-blob-rnum" data-line-number="9"></td>
+          <td id="file-first_version-json-LC9" class="blob-code blob-code-inner js-file-line">  },</td>
+        </tr>
+        <tr>
+          <td id="file-first_version-json-L10" class="blob-num js-line-number js-blob-rnum" data-line-number="10"></td>
+          <td id="file-first_version-json-LC10" class="blob-code blob-code-inner js-file-line">  &quot;sensors&quot;: {</td>
+        </tr>
+        <tr>
+          <td id="file-first_version-json-L11" class="blob-num js-line-number js-blob-rnum" data-line-number="11"></td>
+          <td id="file-first_version-json-LC11" class="blob-code blob-code-inner js-file-line">    &quot;1&quot;: { &quot;label&quot;: &quot;Balkon&quot;, &quot;data&quot;: [&quot;hum_temp&quot;,&quot;hum_hum&quot;,&quot;bar_pres_rel&quot;,&quot;lux&quot;,&quot;vbat&quot;,&quot;vreg&quot;] },</td>
+        </tr>
+        <tr>
+          <td id="file-first_version-json-L12" class="blob-num js-line-number js-blob-rnum" data-line-number="12"></td>
+          <td id="file-first_version-json-LC12" class="blob-code blob-code-inner js-file-line">    &quot;2&quot;: { &quot;label&quot;: &quot;Salon&quot;, &quot;data&quot;: [&quot;hum_temp&quot;,&quot;hum_hum&quot;,&quot;lux&quot;,&quot;vbat&quot;,&quot;vreg&quot; ] },</td>
+        </tr>
+        <tr>
+          <td id="file-first_version-json-L13" class="blob-num js-line-number js-blob-rnum" data-line-number="13"></td>
+          <td id="file-first_version-json-LC13" class="blob-code blob-code-inner js-file-line">    &quot;4&quot;: { &quot;label&quot;: &quot;Biuro&quot;, &quot;data&quot;: [&quot;hum_temp&quot;,&quot;hum_hum&quot;,&quot;lux&quot;,&quot;vbat&quot;,&quot;vreg&quot; ] },</td>
+        </tr>
+        <tr>
+          <td id="file-first_version-json-L14" class="blob-num js-line-number js-blob-rnum" data-line-number="14"></td>
+          <td id="file-first_version-json-LC14" class="blob-code blob-code-inner js-file-line">    &quot;5&quot;: { &quot;label&quot;: &quot;\u0141azienka&quot;, &quot;data&quot;: [&quot;hum_temp&quot;,&quot;hum_hum&quot;,&quot;lux&quot;,&quot;vbat&quot;,&quot;vreg&quot; ] }</td>
+        </tr>
+        <tr>
+          <td id="file-first_version-json-L15" class="blob-num js-line-number js-blob-rnum" data-line-number="15"></td>
+          <td id="file-first_version-json-LC15" class="blob-code blob-code-inner js-file-line">  },</td>
+        </tr>
+        <tr>
+          <td id="file-first_version-json-L16" class="blob-num js-line-number js-blob-rnum" data-line-number="16"></td>
+          <td id="file-first_version-json-LC16" class="blob-code blob-code-inner js-file-line">  &quot;readings&quot;: {</td>
+        </tr>
+        <tr>
+          <td id="file-first_version-json-L17" class="blob-num js-line-number js-blob-rnum" data-line-number="17"></td>
+          <td id="file-first_version-json-LC17" class="blob-code blob-code-inner js-file-line">    &quot;1&quot;: { &quot;id&quot;: 3426091, &quot;stamp&quot;: 1549810634, &quot;sensor_id&quot;: 1, &quot;seq&quot;: 45116, &quot;status&quot;: 0, &quot;flags&quot;: 23, &quot;bar_temp&quot;: 8.22, &quot;bar_pres_abs&quot;: 985.472, &quot;bar_pres_rel&quot;: 1001.16, &quot;lux&quot;: 293.8, &quot;hum_temp&quot;: 7.76, &quot;hum_hum&quot;: 111.8, &quot;vbat&quot;: 3.76, &quot;vreg&quot;: 2.85 },</td>
+        </tr>
+        <tr>
+          <td id="file-first_version-json-L18" class="blob-num js-line-number js-blob-rnum" data-line-number="18"></td>
+          <td id="file-first_version-json-LC18" class="blob-code blob-code-inner js-file-line">    &quot;2&quot;: { &quot;id&quot;: 3426089, &quot;stamp&quot;: 1549810629, &quot;sensor_id&quot;: 2, &quot;seq&quot;: 31088, &quot;status&quot;: 0, &quot;flags&quot;: 6, &quot;bar_temp&quot;: null, &quot;bar_pres_abs&quot;: null, &quot;bar_pres_rel&quot;: null, &quot;lux&quot;: 5.72344, &quot;hum_temp&quot;: 24.01, &quot;hum_hum&quot;: 51.52, &quot;vbat&quot;: 3.64, &quot;vreg&quot;: 2.76 },</td>
+        </tr>
+        <tr>
+          <td id="file-first_version-json-L19" class="blob-num js-line-number js-blob-rnum" data-line-number="19"></td>
+          <td id="file-first_version-json-LC19" class="blob-code blob-code-inner js-file-line">    &quot;4&quot;: { &quot;id&quot;: 3426088, &quot;stamp&quot;: 1549810626, &quot;sensor_id&quot;: 4, &quot;seq&quot;: 49955, &quot;status&quot;: 0, &quot;flags&quot;: 22, &quot;bar_temp&quot;: null, &quot;bar_pres_abs&quot;: null, &quot;bar_pres_rel&quot;: null, &quot;lux&quot;: 15.9223, &quot;hum_temp&quot;: 23.38, &quot;hum_hum&quot;: 54.3, &quot;vbat&quot;: 3.7, &quot;vreg&quot;: 2.84 },</td>
+        </tr>
+        <tr>
+          <td id="file-first_version-json-L20" class="blob-num js-line-number js-blob-rnum" data-line-number="20"></td>
+          <td id="file-first_version-json-LC20" class="blob-code blob-code-inner js-file-line">    &quot;5&quot;: { &quot;id&quot;: 3426090, &quot;stamp&quot;: 1549810633, &quot;sensor_id&quot;: 5, &quot;seq&quot;: 47950, &quot;status&quot;: 0, &quot;flags&quot;: 22, &quot;bar_temp&quot;: null, &quot;bar_pres_abs&quot;: null, &quot;bar_pres_rel&quot;: null, &quot;lux&quot;: 0.0259, &quot;hum_temp&quot;: 26.18, &quot;hum_hum&quot;: 51.63, &quot;vbat&quot;: 3.67, &quot;vreg&quot;: 2.79 }</td>
+        </tr>
+        <tr>
+          <td id="file-first_version-json-L21" class="blob-num js-line-number js-blob-rnum" data-line-number="21"></td>
+          <td id="file-first_version-json-LC21" class="blob-code blob-code-inner js-file-line">  }</td>
+        </tr>
+        <tr>
+          <td id="file-first_version-json-L22" class="blob-num js-line-number js-blob-rnum" data-line-number="22"></td>
+          <td id="file-first_version-json-LC22" class="blob-code blob-code-inner js-file-line">}</td>
+        </tr>
+  </table>
+</div>
+
+
+    </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/jezinka/3f84a59225c30377403dd627b9d6fd27/raw/576225a6c9125bea2bd549b4e8cb60712c790a68/first_version.json" style="float:right" class="Link--inTextBlock">view raw</a>
+        <a href="https://gist.github.com/jezinka/3f84a59225c30377403dd627b9d6fd27#file-first_version-json" class="Link--inTextBlock">
+          first_version.json
+        </a>
+        hosted with &#10084; by <a class="Link--inTextBlock" href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+
+</div></figure>
+
+
+
+<p>Format JSON-a zawieraj&#261;cy odczyty sensorka nie by&#322; zbyt przyjazny do wy&#347;wietlania przez aplikacj&#281;. Trzy obiekty zawieraj&#261;ce kolejne obiekty. Du&#380;o danych, kt&oacute;rych wcale nie potrzebowa&#322;am. &#379;eby wyci&#261;gn&#261;&#263; etykiet&#281; z sensora musia&#322;am si&#281; odwo&#322;a&#263; do innej listy.</p>
+
+
+
+<p>Postanowi&#322;am sprowadzi&#263; tego JSON-a do prostej listy zawieraj&#261;cej tylko te dane, z kt&oacute;rych naprawd&#281; korzysta&#322;a. Za pomoc&#261; javaScriptu i node.js stworzy&#322;am funkcj&#281; pobierajc&#261; jsona z dotychczasowego endpointu. Dwie p&#281;tle i JSON zacz&#261;&#322; by&#263; maksymalnie u&#380;yteczny. </p>
+
+
+
+<figure class="wp-block-embed is-type-rich is-provider-embed-handler"><div class="wp-block-embed__wrapper">
+<style>.gist table { margin-bottom: 0; }</style><div style="tab-size: 8" id="gist94562783" class="gist">
+    <div class="gist-file" translate="no" data-color-mode="light" data-light-theme="light">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container">
+  <div id="file-app-js" class="file my-2">
+    
+    <div itemprop="text" class="Box-body p-0 blob-wrapper data type-javascript  " style="overflow: auto" tabindex="0" role="region" aria-label="app.js content, created by jezinka on 02:49PM on February 10, 2019.">
+
+        
+<div class="js-check-hidden-unicode js-blob-code-container blob-code-content">
+
+  <template class="js-file-alert-template">
+  <div data-view-component="true" class="flash flash-warn flash-full d-flex flex-items-center">
+  <svg aria-hidden="true" height="16" viewbox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">
+    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
+</svg>
+    <span>
+      This file contains hidden or bidirectional Unicode text that may be interpreted or compiled differently than what appears below. To review, open the file in an editor that reveals hidden Unicode characters.
+      <a class="Link--inTextBlock" href="https://github.co/hiddenchars" target="_blank">Learn more about bidirectional Unicode characters</a>
+    </span>
+
+
+  <div data-view-component="true" class="flash-action">        <a href="/sensorki-serverless-app-i-refaktoring-9/%7B%7B%20revealButtonHref%20%7D%7D" data-view-component="true" class="btn-sm btn">    Show hidden characters
+</a>
+</div>
+</div></template>
+<template class="js-line-alert-template">
+  <span aria-label="This line has hidden Unicode characters" data-view-component="true" class="line-alert tooltipped tooltipped-e">
+    <svg aria-hidden="true" height="16" viewbox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">
+    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
+</svg>
+</span></template>
+
+  <table data-hpc class="highlight tab-size js-file-line-container" data-tab-size="4" data-paste-markdown-skip data-tagsearch-path="app.js">
+        <tr>
+          <td id="file-app-js-L1" class="blob-num js-line-number js-blob-rnum" data-line-number="1"></td>
+          <td id="file-app-js-LC1" class="blob-code blob-code-inner js-file-line">const https = require(&quot;https&quot;);</td>
+        </tr>
+        <tr>
+          <td id="file-app-js-L2" class="blob-num js-line-number js-blob-rnum" data-line-number="2"></td>
+          <td id="file-app-js-LC2" class="blob-code blob-code-inner js-file-line">const http = require(&quot;http&quot;);</td>
+        </tr>
+        <tr>
+          <td id="file-app-js-L3" class="blob-num js-line-number js-blob-rnum" data-line-number="3"></td>
+          <td id="file-app-js-LC3" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-app-js-L4" class="blob-num js-line-number js-blob-rnum" data-line-number="4"></td>
+          <td id="file-app-js-LC4" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-app-js-L5" class="blob-num js-line-number js-blob-rnum" data-line-number="5"></td>
+          <td id="file-app-js-LC5" class="blob-code blob-code-inner js-file-line">http.createServer(function (request, response) {</td>
+        </tr>
+        <tr>
+          <td id="file-app-js-L6" class="blob-num js-line-number js-blob-rnum" data-line-number="6"></td>
+          <td id="file-app-js-LC6" class="blob-code blob-code-inner js-file-line">    response.writeHead(200, {'Content-Type': 'application/json'});</td>
+        </tr>
+        <tr>
+          <td id="file-app-js-L7" class="blob-num js-line-number js-blob-rnum" data-line-number="7"></td>
+          <td id="file-app-js-LC7" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-app-js-L8" class="blob-num js-line-number js-blob-rnum" data-line-number="8"></td>
+          <td id="file-app-js-LC8" class="blob-code blob-code-inner js-file-line">    const req = https.request('https://xxxxxxxxxxxxx.com/data.json', (res) =&gt; {</td>
+        </tr>
+        <tr>
+          <td id="file-app-js-L9" class="blob-num js-line-number js-blob-rnum" data-line-number="9"></td>
+          <td id="file-app-js-LC9" class="blob-code blob-code-inner js-file-line">        console.log(`STATUS: ${res.statusCode}`);</td>
+        </tr>
+        <tr>
+          <td id="file-app-js-L10" class="blob-num js-line-number js-blob-rnum" data-line-number="10"></td>
+          <td id="file-app-js-LC10" class="blob-code blob-code-inner js-file-line">        console.log(`HEADERS: ${JSON.stringify(res.headers)}`);</td>
+        </tr>
+        <tr>
+          <td id="file-app-js-L11" class="blob-num js-line-number js-blob-rnum" data-line-number="11"></td>
+          <td id="file-app-js-LC11" class="blob-code blob-code-inner js-file-line">        res.setEncoding('utf8');</td>
+        </tr>
+        <tr>
+          <td id="file-app-js-L12" class="blob-num js-line-number js-blob-rnum" data-line-number="12"></td>
+          <td id="file-app-js-LC12" class="blob-code blob-code-inner js-file-line">        res.on('data', (chunk) =&gt; {</td>
+        </tr>
+        <tr>
+          <td id="file-app-js-L13" class="blob-num js-line-number js-blob-rnum" data-line-number="13"></td>
+          <td id="file-app-js-LC13" class="blob-code blob-code-inner js-file-line">            const data = JSON.parse(chunk);</td>
+        </tr>
+        <tr>
+          <td id="file-app-js-L14" class="blob-num js-line-number js-blob-rnum" data-line-number="14"></td>
+          <td id="file-app-js-LC14" class="blob-code blob-code-inner js-file-line">            const sensors = [];</td>
+        </tr>
+        <tr>
+          <td id="file-app-js-L15" class="blob-num js-line-number js-blob-rnum" data-line-number="15"></td>
+          <td id="file-app-js-LC15" class="blob-code blob-code-inner js-file-line">            for (const id in data.readings) {</td>
+        </tr>
+        <tr>
+          <td id="file-app-js-L16" class="blob-num js-line-number js-blob-rnum" data-line-number="16"></td>
+          <td id="file-app-js-LC16" class="blob-code blob-code-inner js-file-line">                const sensor = {};</td>
+        </tr>
+        <tr>
+          <td id="file-app-js-L17" class="blob-num js-line-number js-blob-rnum" data-line-number="17"></td>
+          <td id="file-app-js-LC17" class="blob-code blob-code-inner js-file-line">                const sourceSensor = data.sensors[id];</td>
+        </tr>
+        <tr>
+          <td id="file-app-js-L18" class="blob-num js-line-number js-blob-rnum" data-line-number="18"></td>
+          <td id="file-app-js-LC18" class="blob-code blob-code-inner js-file-line">                sensor.label = sourceSensor.label;</td>
+        </tr>
+        <tr>
+          <td id="file-app-js-L19" class="blob-num js-line-number js-blob-rnum" data-line-number="19"></td>
+          <td id="file-app-js-LC19" class="blob-code blob-code-inner js-file-line">                const readings = data.readings[id];</td>
+        </tr>
+        <tr>
+          <td id="file-app-js-L20" class="blob-num js-line-number js-blob-rnum" data-line-number="20"></td>
+          <td id="file-app-js-LC20" class="blob-code blob-code-inner js-file-line">                for (const k of [&quot;hum_temp&quot;, &quot;stamp&quot;, &quot;hum_hum&quot;, &quot;lux&quot;, &quot;bar_pres_rel&quot;, &quot;vbat&quot;, &quot;vreg&quot;, &quot;id&quot;]) {</td>
+        </tr>
+        <tr>
+          <td id="file-app-js-L21" class="blob-num js-line-number js-blob-rnum" data-line-number="21"></td>
+          <td id="file-app-js-LC21" class="blob-code blob-code-inner js-file-line">                    if (k === 'stamp') {</td>
+        </tr>
+        <tr>
+          <td id="file-app-js-L22" class="blob-num js-line-number js-blob-rnum" data-line-number="22"></td>
+          <td id="file-app-js-LC22" class="blob-code blob-code-inner js-file-line">                        sensor[k] = readings[k] * 1000</td>
+        </tr>
+        <tr>
+          <td id="file-app-js-L23" class="blob-num js-line-number js-blob-rnum" data-line-number="23"></td>
+          <td id="file-app-js-LC23" class="blob-code blob-code-inner js-file-line">                    } else {</td>
+        </tr>
+        <tr>
+          <td id="file-app-js-L24" class="blob-num js-line-number js-blob-rnum" data-line-number="24"></td>
+          <td id="file-app-js-LC24" class="blob-code blob-code-inner js-file-line">                        sensor[k] = readings[k]</td>
+        </tr>
+        <tr>
+          <td id="file-app-js-L25" class="blob-num js-line-number js-blob-rnum" data-line-number="25"></td>
+          <td id="file-app-js-LC25" class="blob-code blob-code-inner js-file-line">                    }</td>
+        </tr>
+        <tr>
+          <td id="file-app-js-L26" class="blob-num js-line-number js-blob-rnum" data-line-number="26"></td>
+          <td id="file-app-js-LC26" class="blob-code blob-code-inner js-file-line">                }</td>
+        </tr>
+        <tr>
+          <td id="file-app-js-L27" class="blob-num js-line-number js-blob-rnum" data-line-number="27"></td>
+          <td id="file-app-js-LC27" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-app-js-L28" class="blob-num js-line-number js-blob-rnum" data-line-number="28"></td>
+          <td id="file-app-js-LC28" class="blob-code blob-code-inner js-file-line">                sensors.push(sensor);</td>
+        </tr>
+        <tr>
+          <td id="file-app-js-L29" class="blob-num js-line-number js-blob-rnum" data-line-number="29"></td>
+          <td id="file-app-js-LC29" class="blob-code blob-code-inner js-file-line">            }</td>
+        </tr>
+        <tr>
+          <td id="file-app-js-L30" class="blob-num js-line-number js-blob-rnum" data-line-number="30"></td>
+          <td id="file-app-js-LC30" class="blob-code blob-code-inner js-file-line">            response.end(JSON.stringify(sensors));</td>
+        </tr>
+        <tr>
+          <td id="file-app-js-L31" class="blob-num js-line-number js-blob-rnum" data-line-number="31"></td>
+          <td id="file-app-js-LC31" class="blob-code blob-code-inner js-file-line">        });</td>
+        </tr>
+        <tr>
+          <td id="file-app-js-L32" class="blob-num js-line-number js-blob-rnum" data-line-number="32"></td>
+          <td id="file-app-js-LC32" class="blob-code blob-code-inner js-file-line">        res.on('end', () =&gt; {</td>
+        </tr>
+        <tr>
+          <td id="file-app-js-L33" class="blob-num js-line-number js-blob-rnum" data-line-number="33"></td>
+          <td id="file-app-js-LC33" class="blob-code blob-code-inner js-file-line">            console.log('No more data in response.');</td>
+        </tr>
+        <tr>
+          <td id="file-app-js-L34" class="blob-num js-line-number js-blob-rnum" data-line-number="34"></td>
+          <td id="file-app-js-LC34" class="blob-code blob-code-inner js-file-line">        });</td>
+        </tr>
+        <tr>
+          <td id="file-app-js-L35" class="blob-num js-line-number js-blob-rnum" data-line-number="35"></td>
+          <td id="file-app-js-LC35" class="blob-code blob-code-inner js-file-line">    });</td>
+        </tr>
+        <tr>
+          <td id="file-app-js-L36" class="blob-num js-line-number js-blob-rnum" data-line-number="36"></td>
+          <td id="file-app-js-LC36" class="blob-code blob-code-inner js-file-line">    req.end();</td>
+        </tr>
+        <tr>
+          <td id="file-app-js-L37" class="blob-num js-line-number js-blob-rnum" data-line-number="37"></td>
+          <td id="file-app-js-LC37" class="blob-code blob-code-inner js-file-line">}).listen(8081);</td>
+        </tr>
+  </table>
+</div>
+
+
+    </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/jezinka/04196a710f7067d9fee1077682ad548a/raw/2c1e655c3c6fdda34d1b8324af92101addd75b74/app.js" style="float:right" class="Link--inTextBlock">view raw</a>
+        <a href="https://gist.github.com/jezinka/04196a710f7067d9fee1077682ad548a#file-app-js" class="Link--inTextBlock">
+          app.js
+        </a>
+        hosted with &#10084; by <a class="Link--inTextBlock" href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+
+</div></figure>
+
+
+
+<p>Wyodr&#281;bni&#322;am z serwera funkcj&#281; i przenios&#322;am do chmury google&rsquo;a tworz&#261;c &bdquo;aplikacj&#281; bezserwerow&#261;.</p>
+
+
+
+<p>W wyniku obr&oacute;bki przez funkcj&#281; dostaj&#281; teraz takiego JSON-a.</p>
+
+
+
+<figure class="wp-block-embed is-type-rich is-provider-embed-handler"><div class="wp-block-embed__wrapper">
+<style>.gist table { margin-bottom: 0; }</style><div style="tab-size: 8" id="gist94562975" class="gist">
+    <div class="gist-file" translate="no" data-color-mode="light" data-light-theme="light">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container">
+  <div id="file-second_version-json" class="file my-2">
+    
+    <div itemprop="text" class="Box-body p-0 blob-wrapper data type-json  " style="overflow: auto" tabindex="0" role="region" aria-label="second_version.json content, created by jezinka on 03:05PM on February 10, 2019.">
+
+        
+<div class="js-check-hidden-unicode js-blob-code-container blob-code-content">
+
+  <template class="js-file-alert-template">
+  <div data-view-component="true" class="flash flash-warn flash-full d-flex flex-items-center">
+  <svg aria-hidden="true" height="16" viewbox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">
+    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
+</svg>
+    <span>
+      This file contains hidden or bidirectional Unicode text that may be interpreted or compiled differently than what appears below. To review, open the file in an editor that reveals hidden Unicode characters.
+      <a class="Link--inTextBlock" href="https://github.co/hiddenchars" target="_blank">Learn more about bidirectional Unicode characters</a>
+    </span>
+
+
+  <div data-view-component="true" class="flash-action">        <a href="/sensorki-serverless-app-i-refaktoring-9/%7B%7B%20revealButtonHref%20%7D%7D" data-view-component="true" class="btn-sm btn">    Show hidden characters
+</a>
+</div>
+</div></template>
+<template class="js-line-alert-template">
+  <span aria-label="This line has hidden Unicode characters" data-view-component="true" class="line-alert tooltipped tooltipped-e">
+    <svg aria-hidden="true" height="16" viewbox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">
+    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
+</svg>
+</span></template>
+
+  <table data-hpc class="highlight tab-size js-file-line-container" data-tab-size="4" data-paste-markdown-skip data-tagsearch-path="second_version.json">
+        <tr>
+          <td id="file-second_version-json-L1" class="blob-num js-line-number js-blob-rnum" data-line-number="1"></td>
+          <td id="file-second_version-json-LC1" class="blob-code blob-code-inner js-file-line">[</td>
+        </tr>
+        <tr>
+          <td id="file-second_version-json-L2" class="blob-num js-line-number js-blob-rnum" data-line-number="2"></td>
+          <td id="file-second_version-json-LC2" class="blob-code blob-code-inner js-file-line">  { &quot;label&quot;: &quot;Balkon&quot;, &quot;id&quot;: 3426099, &quot;hum_temp&quot;: 7.7, &quot;stamp&quot;: 1549810672000, &quot;hum_hum&quot;: 111.72, &quot;lux&quot;: 291.902, &quot;bar_pres_rel&quot;: 1001.12, &quot;vbat&quot;: 3.75, &quot;vreg&quot;: 2.84  },</td>
+        </tr>
+        <tr>
+          <td id="file-second_version-json-L3" class="blob-num js-line-number js-blob-rnum" data-line-number="3"></td>
+          <td id="file-second_version-json-LC3" class="blob-code blob-code-inner js-file-line">  { &quot;label&quot;: &quot;Salon&quot;, &quot;id&quot;: 3426097, &quot;hum_temp&quot;: 24, &quot;stamp&quot;: 1549810663000, &quot;hum_hum&quot;: 51.31, &quot;lux&quot;: 5.74635, &quot;bar_pres_rel&quot;: null, &quot;vbat&quot;: 3.64, &quot;vreg&quot;: 2.76  },</td>
+        </tr>
+        <tr>
+          <td id="file-second_version-json-L4" class="blob-num js-line-number js-blob-rnum" data-line-number="4"></td>
+          <td id="file-second_version-json-LC4" class="blob-code blob-code-inner js-file-line">  { &quot;label&quot;: &quot;Biuro&quot;, &quot;id&quot;: 3426096, &quot;hum_temp&quot;: 23.38, &quot;stamp&quot;: 1549810661000, &quot;hum_hum&quot;: 54.19, &quot;lux&quot;: 15.9444, &quot;bar_pres_rel&quot;: null, &quot;vbat&quot;: 3.7, &quot;vreg&quot;: 2.84  },</td>
+        </tr>
+        <tr>
+          <td id="file-second_version-json-L5" class="blob-num js-line-number js-blob-rnum" data-line-number="5"></td>
+          <td id="file-second_version-json-LC5" class="blob-code blob-code-inner js-file-line">  { &quot;label&quot;: &quot;&#321;azienka&quot;, &quot;id&quot;: 3426098, &quot;hum_temp&quot;: 26.17, &quot;stamp&quot;: 1549810668000, &quot;hum_hum&quot;: 51.62, &quot;lux&quot;: 0.0259, &quot;bar_pres_rel&quot;: null, &quot;vbat&quot;: 3.67, &quot;vreg&quot;: 2.79  }</td>
+        </tr>
+        <tr>
+          <td id="file-second_version-json-L6" class="blob-num js-line-number js-blob-rnum" data-line-number="6"></td>
+          <td id="file-second_version-json-LC6" class="blob-code blob-code-inner js-file-line">]</td>
+        </tr>
+  </table>
+</div>
+
+
+    </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/jezinka/0f65d5126c3870ed32449c27630b07e7/raw/6ffbbeccd79b5048f2db09bba182f9b329bfa123/second_version.json" style="float:right" class="Link--inTextBlock">view raw</a>
+        <a href="https://gist.github.com/jezinka/0f65d5126c3870ed32449c27630b07e7#file-second_version-json" class="Link--inTextBlock">
+          second_version.json
+        </a>
+        hosted with &#10084; by <a class="Link--inTextBlock" href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+
+</div></figure>
+
+
+
+<p>Pozwoli&#322;o mi to na u&#380;ycie biblioteki Moshi do mapowania JSONa prosto do javowej klasy. Adnotacje w miejscach gdzie nazwa pola nie zgadza&#322;a si&#281; z polem w JSONie</p>
+
+
+
+<figure class="wp-block-embed is-type-rich is-provider-embed-handler"><div class="wp-block-embed__wrapper">
+<style>.gist table { margin-bottom: 0; }</style><div style="tab-size: 8" id="gist94696204" class="gist">
+    <div class="gist-file" translate="no" data-color-mode="light" data-light-theme="light">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container">
+  <div id="file-sensor-java" class="file my-2">
+    
+    <div itemprop="text" class="Box-body p-0 blob-wrapper data type-java  " style="overflow: auto" tabindex="0" role="region" aria-label="Sensor.java content, created by jezinka on 08:57AM on February 17, 2019.">
+
+        
+<div class="js-check-hidden-unicode js-blob-code-container blob-code-content">
+
+  <template class="js-file-alert-template">
+  <div data-view-component="true" class="flash flash-warn flash-full d-flex flex-items-center">
+  <svg aria-hidden="true" height="16" viewbox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">
+    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
+</svg>
+    <span>
+      This file contains hidden or bidirectional Unicode text that may be interpreted or compiled differently than what appears below. To review, open the file in an editor that reveals hidden Unicode characters.
+      <a class="Link--inTextBlock" href="https://github.co/hiddenchars" target="_blank">Learn more about bidirectional Unicode characters</a>
+    </span>
+
+
+  <div data-view-component="true" class="flash-action">        <a href="/sensorki-serverless-app-i-refaktoring-9/%7B%7B%20revealButtonHref%20%7D%7D" data-view-component="true" class="btn-sm btn">    Show hidden characters
+</a>
+</div>
+</div></template>
+<template class="js-line-alert-template">
+  <span aria-label="This line has hidden Unicode characters" data-view-component="true" class="line-alert tooltipped tooltipped-e">
+    <svg aria-hidden="true" height="16" viewbox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">
+    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
+</svg>
+</span></template>
+
+  <table data-hpc class="highlight tab-size js-file-line-container" data-tab-size="4" data-paste-markdown-skip data-tagsearch-path="Sensor.java">
+        <tr>
+          <td id="file-sensor-java-L1" class="blob-num js-line-number js-blob-rnum" data-line-number="1"></td>
+          <td id="file-sensor-java-LC1" class="blob-code blob-code-inner js-file-line">public class Sensor {</td>
+        </tr>
+        <tr>
+          <td id="file-sensor-java-L2" class="blob-num js-line-number js-blob-rnum" data-line-number="2"></td>
+          <td id="file-sensor-java-LC2" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-sensor-java-L3" class="blob-num js-line-number js-blob-rnum" data-line-number="3"></td>
+          <td id="file-sensor-java-LC3" class="blob-code blob-code-inner js-file-line">    private long id;</td>
+        </tr>
+        <tr>
+          <td id="file-sensor-java-L4" class="blob-num js-line-number js-blob-rnum" data-line-number="4"></td>
+          <td id="file-sensor-java-LC4" class="blob-code blob-code-inner js-file-line">    private String label;</td>
+        </tr>
+        <tr>
+          <td id="file-sensor-java-L5" class="blob-num js-line-number js-blob-rnum" data-line-number="5"></td>
+          <td id="file-sensor-java-LC5" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-sensor-java-L6" class="blob-num js-line-number js-blob-rnum" data-line-number="6"></td>
+          <td id="file-sensor-java-LC6" class="blob-code blob-code-inner js-file-line">    @Json(name = &quot;hum_temp&quot;)</td>
+        </tr>
+        <tr>
+          <td id="file-sensor-java-L7" class="blob-num js-line-number js-blob-rnum" data-line-number="7"></td>
+          <td id="file-sensor-java-LC7" class="blob-code blob-code-inner js-file-line">    private double temperature;</td>
+        </tr>
+        <tr>
+          <td id="file-sensor-java-L8" class="blob-num js-line-number js-blob-rnum" data-line-number="8"></td>
+          <td id="file-sensor-java-LC8" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-sensor-java-L9" class="blob-num js-line-number js-blob-rnum" data-line-number="9"></td>
+          <td id="file-sensor-java-LC9" class="blob-code blob-code-inner js-file-line">    @Json(name = &quot;stamp&quot;)</td>
+        </tr>
+        <tr>
+          <td id="file-sensor-java-L10" class="blob-num js-line-number js-blob-rnum" data-line-number="10"></td>
+          <td id="file-sensor-java-LC10" class="blob-code blob-code-inner js-file-line">    private long timestamp;</td>
+        </tr>
+        <tr>
+          <td id="file-sensor-java-L11" class="blob-num js-line-number js-blob-rnum" data-line-number="11"></td>
+          <td id="file-sensor-java-LC11" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-sensor-java-L12" class="blob-num js-line-number js-blob-rnum" data-line-number="12"></td>
+          <td id="file-sensor-java-LC12" class="blob-code blob-code-inner js-file-line">    @Json(name = &quot;hum_hum&quot;)</td>
+        </tr>
+        <tr>
+          <td id="file-sensor-java-L13" class="blob-num js-line-number js-blob-rnum" data-line-number="13"></td>
+          <td id="file-sensor-java-LC13" class="blob-code blob-code-inner js-file-line">    private double humidity;</td>
+        </tr>
+        <tr>
+          <td id="file-sensor-java-L14" class="blob-num js-line-number js-blob-rnum" data-line-number="14"></td>
+          <td id="file-sensor-java-LC14" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-sensor-java-L15" class="blob-num js-line-number js-blob-rnum" data-line-number="15"></td>
+          <td id="file-sensor-java-LC15" class="blob-code blob-code-inner js-file-line">    private double lux;</td>
+        </tr>
+        <tr>
+          <td id="file-sensor-java-L16" class="blob-num js-line-number js-blob-rnum" data-line-number="16"></td>
+          <td id="file-sensor-java-LC16" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-sensor-java-L17" class="blob-num js-line-number js-blob-rnum" data-line-number="17"></td>
+          <td id="file-sensor-java-LC17" class="blob-code blob-code-inner js-file-line">    @Json(name = &quot;bar_pres_rel&quot;)</td>
+        </tr>
+        <tr>
+          <td id="file-sensor-java-L18" class="blob-num js-line-number js-blob-rnum" data-line-number="18"></td>
+          <td id="file-sensor-java-LC18" class="blob-code blob-code-inner js-file-line">    private Double barPressure;</td>
+        </tr>
+        <tr>
+          <td id="file-sensor-java-L19" class="blob-num js-line-number js-blob-rnum" data-line-number="19"></td>
+          <td id="file-sensor-java-LC19" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-sensor-java-L20" class="blob-num js-line-number js-blob-rnum" data-line-number="20"></td>
+          <td id="file-sensor-java-LC20" class="blob-code blob-code-inner js-file-line">    private double vbat;</td>
+        </tr>
+        <tr>
+          <td id="file-sensor-java-L21" class="blob-num js-line-number js-blob-rnum" data-line-number="21"></td>
+          <td id="file-sensor-java-LC21" class="blob-code blob-code-inner js-file-line">    private double vreg;</td>
+        </tr>
+        <tr>
+          <td id="file-sensor-java-L22" class="blob-num js-line-number js-blob-rnum" data-line-number="22"></td>
+          <td id="file-sensor-java-LC22" class="blob-code blob-code-inner js-file-line">}</td>
+        </tr>
+  </table>
+</div>
+
+
+    </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/jezinka/a1c5c3d4f4d52aa56859d36247cbf847/raw/9af61ef2b39fab26d57562970fc10657edc59bd5/Sensor.java" style="float:right" class="Link--inTextBlock">view raw</a>
+        <a href="https://gist.github.com/jezinka/a1c5c3d4f4d52aa56859d36247cbf847#file-sensor-java" class="Link--inTextBlock">
+          Sensor.java
+        </a>
+        hosted with &#10084; by <a class="Link--inTextBlock" href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+
+</div></figure>
+
+
+
+<p>i ju&#380; mog&#281; korzysta&#263; z tego, &#380;e serwer zwraca mi po prostu list&#281; obiekt&oacute;w Sensor zamiast JSON Object</p>
+
+
+
+<figure class="wp-block-embed is-type-rich is-provider-embed-handler"><div class="wp-block-embed__wrapper">
+<style>.gist table { margin-bottom: 0; }</style><div style="tab-size: 8" id="gist94696251" class="gist">
+    <div class="gist-file" translate="no" data-color-mode="light" data-light-theme="light">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container">
+  <div id="file-weatherservice-java" class="file my-2">
+    
+    <div itemprop="text" class="Box-body p-0 blob-wrapper data type-java  " style="overflow: auto" tabindex="0" role="region" aria-label="WeatherService.java content, created by jezinka on 09:02AM on February 17, 2019.">
+
+        
+<div class="js-check-hidden-unicode js-blob-code-container blob-code-content">
+
+  <template class="js-file-alert-template">
+  <div data-view-component="true" class="flash flash-warn flash-full d-flex flex-items-center">
+  <svg aria-hidden="true" height="16" viewbox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">
+    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
+</svg>
+    <span>
+      This file contains hidden or bidirectional Unicode text that may be interpreted or compiled differently than what appears below. To review, open the file in an editor that reveals hidden Unicode characters.
+      <a class="Link--inTextBlock" href="https://github.co/hiddenchars" target="_blank">Learn more about bidirectional Unicode characters</a>
+    </span>
+
+
+  <div data-view-component="true" class="flash-action">        <a href="/sensorki-serverless-app-i-refaktoring-9/%7B%7B%20revealButtonHref%20%7D%7D" data-view-component="true" class="btn-sm btn">    Show hidden characters
+</a>
+</div>
+</div></template>
+<template class="js-line-alert-template">
+  <span aria-label="This line has hidden Unicode characters" data-view-component="true" class="line-alert tooltipped tooltipped-e">
+    <svg aria-hidden="true" height="16" viewbox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">
+    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
+</svg>
+</span></template>
+
+  <table data-hpc class="highlight tab-size js-file-line-container" data-tab-size="4" data-paste-markdown-skip data-tagsearch-path="WeatherService.java">
+        <tr>
+          <td id="file-weatherservice-java-L1" class="blob-num js-line-number js-blob-rnum" data-line-number="1"></td>
+          <td id="file-weatherservice-java-LC1" class="blob-code blob-code-inner js-file-line">public interface WeatherService {</td>
+        </tr>
+        <tr>
+          <td id="file-weatherservice-java-L2" class="blob-num js-line-number js-blob-rnum" data-line-number="2"></td>
+          <td id="file-weatherservice-java-LC2" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-weatherservice-java-L3" class="blob-num js-line-number js-blob-rnum" data-line-number="3"></td>
+          <td id="file-weatherservice-java-LC3" class="blob-code blob-code-inner js-file-line">    @GET(&quot;sensorFriendly&quot;)</td>
+        </tr>
+        <tr>
+          <td id="file-weatherservice-java-L4" class="blob-num js-line-number js-blob-rnum" data-line-number="4"></td>
+          <td id="file-weatherservice-java-LC4" class="blob-code blob-code-inner js-file-line">    Call&lt;List&lt;Sensor&gt;&gt; loadData();</td>
+        </tr>
+        <tr>
+          <td id="file-weatherservice-java-L5" class="blob-num js-line-number js-blob-rnum" data-line-number="5"></td>
+          <td id="file-weatherservice-java-LC5" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-weatherservice-java-L6" class="blob-num js-line-number js-blob-rnum" data-line-number="6"></td>
+          <td id="file-weatherservice-java-LC6" class="blob-code blob-code-inner js-file-line">    Retrofit retrofit = new Retrofit.Builder()</td>
+        </tr>
+        <tr>
+          <td id="file-weatherservice-java-L7" class="blob-num js-line-number js-blob-rnum" data-line-number="7"></td>
+          <td id="file-weatherservice-java-LC7" class="blob-code blob-code-inner js-file-line">            .baseUrl(BuildConfig.WEATHER_ADDRESS)</td>
+        </tr>
+        <tr>
+          <td id="file-weatherservice-java-L8" class="blob-num js-line-number js-blob-rnum" data-line-number="8"></td>
+          <td id="file-weatherservice-java-LC8" class="blob-code blob-code-inner js-file-line">            .addConverterFactory(MoshiConverterFactory.create())</td>
+        </tr>
+        <tr>
+          <td id="file-weatherservice-java-L9" class="blob-num js-line-number js-blob-rnum" data-line-number="9"></td>
+          <td id="file-weatherservice-java-LC9" class="blob-code blob-code-inner js-file-line">            .build();</td>
+        </tr>
+        <tr>
+          <td id="file-weatherservice-java-L10" class="blob-num js-line-number js-blob-rnum" data-line-number="10"></td>
+          <td id="file-weatherservice-java-LC10" class="blob-code blob-code-inner js-file-line">}</td>
+        </tr>
+  </table>
+</div>
+
+
+    </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/jezinka/1a55f5acf48be01e1f6263a142606d38/raw/33d45b241e2f8fca72f23d106b8ee383372a4af8/WeatherService.java" style="float:right" class="Link--inTextBlock">view raw</a>
+        <a href="https://gist.github.com/jezinka/1a55f5acf48be01e1f6263a142606d38#file-weatherservice-java" class="Link--inTextBlock">
+          WeatherService.java
+        </a>
+        hosted with &#10084; by <a class="Link--inTextBlock" href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+
+</div></figure>
+
+
+
+<p>Pozbywam si&#281; r&#281;cznego wydobywania z JSON-a labelek i poszczeg&oacute;lnych odczyt&oacute;w.</p>
+
+
+
+<figure class="wp-block-embed is-type-rich is-provider-embed-handler"><div class="wp-block-embed__wrapper">
+<style>.gist table { margin-bottom: 0; }</style><div style="tab-size: 8" id="gist94696369" class="gist">
+    <div class="gist-file" translate="no" data-color-mode="light" data-light-theme="light">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container">
+  <div id="file-mainactivity-java" class="file my-2">
+    
+    <div itemprop="text" class="Box-body p-0 blob-wrapper data type-java  " style="overflow: auto" tabindex="0" role="region" aria-label="MainActivity.java content, created by jezinka on 09:17AM on February 17, 2019.">
+
+        
+<div class="js-check-hidden-unicode js-blob-code-container blob-code-content">
+
+  <template class="js-file-alert-template">
+  <div data-view-component="true" class="flash flash-warn flash-full d-flex flex-items-center">
+  <svg aria-hidden="true" height="16" viewbox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">
+    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
+</svg>
+    <span>
+      This file contains hidden or bidirectional Unicode text that may be interpreted or compiled differently than what appears below. To review, open the file in an editor that reveals hidden Unicode characters.
+      <a class="Link--inTextBlock" href="https://github.co/hiddenchars" target="_blank">Learn more about bidirectional Unicode characters</a>
+    </span>
+
+
+  <div data-view-component="true" class="flash-action">        <a href="/sensorki-serverless-app-i-refaktoring-9/%7B%7B%20revealButtonHref%20%7D%7D" data-view-component="true" class="btn-sm btn">    Show hidden characters
+</a>
+</div>
+</div></template>
+<template class="js-line-alert-template">
+  <span aria-label="This line has hidden Unicode characters" data-view-component="true" class="line-alert tooltipped tooltipped-e">
+    <svg aria-hidden="true" height="16" viewbox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">
+    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
+</svg>
+</span></template>
+
+  <table data-hpc class="highlight tab-size js-file-line-container" data-tab-size="4" data-paste-markdown-skip data-tagsearch-path="MainActivity.java">
+        <tr>
+          <td id="file-mainactivity-java-L1" class="blob-num js-line-number js-blob-rnum" data-line-number="1"></td>
+          <td id="file-mainactivity-java-LC1" class="blob-code blob-code-inner js-file-line">    private void sendQueryForData() {</td>
+        </tr>
+        <tr>
+          <td id="file-mainactivity-java-L2" class="blob-num js-line-number js-blob-rnum" data-line-number="2"></td>
+          <td id="file-mainactivity-java-LC2" class="blob-code blob-code-inner js-file-line">        final Context mContext = this;</td>
+        </tr>
+        <tr>
+          <td id="file-mainactivity-java-L3" class="blob-num js-line-number js-blob-rnum" data-line-number="3"></td>
+          <td id="file-mainactivity-java-LC3" class="blob-code blob-code-inner js-file-line">        WeatherService weatherService = WeatherService.retrofit.create(WeatherService.class);</td>
+        </tr>
+        <tr>
+          <td id="file-mainactivity-java-L4" class="blob-num js-line-number js-blob-rnum" data-line-number="4"></td>
+          <td id="file-mainactivity-java-LC4" class="blob-code blob-code-inner js-file-line">        final Call&lt;List&lt;Sensor&gt;&gt; call = weatherService.loadData();</td>
+        </tr>
+        <tr>
+          <td id="file-mainactivity-java-L5" class="blob-num js-line-number js-blob-rnum" data-line-number="5"></td>
+          <td id="file-mainactivity-java-LC5" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-mainactivity-java-L6" class="blob-num js-line-number js-blob-rnum" data-line-number="6"></td>
+          <td id="file-mainactivity-java-LC6" class="blob-code blob-code-inner js-file-line">        call.enqueue(new Callback&lt;List&lt;Sensor&gt;&gt;() {</td>
+        </tr>
+        <tr>
+          <td id="file-mainactivity-java-L7" class="blob-num js-line-number js-blob-rnum" data-line-number="7"></td>
+          <td id="file-mainactivity-java-LC7" class="blob-code blob-code-inner js-file-line">            @Override</td>
+        </tr>
+        <tr>
+          <td id="file-mainactivity-java-L8" class="blob-num js-line-number js-blob-rnum" data-line-number="8"></td>
+          <td id="file-mainactivity-java-LC8" class="blob-code blob-code-inner js-file-line">            public void onResponse(@NonNull Call&lt;List&lt;Sensor&gt;&gt; call, @NonNull Response&lt;List&lt;Sensor&gt;&gt; response) {</td>
+        </tr>
+        <tr>
+          <td id="file-mainactivity-java-L9" class="blob-num js-line-number js-blob-rnum" data-line-number="9"></td>
+          <td id="file-mainactivity-java-LC9" class="blob-code blob-code-inner js-file-line">                List&lt;Sensor&gt; sensors = response.body();</td>
+        </tr>
+        <tr>
+          <td id="file-mainactivity-java-L10" class="blob-num js-line-number js-blob-rnum" data-line-number="10"></td>
+          <td id="file-mainactivity-java-LC10" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-mainactivity-java-L11" class="blob-num js-line-number js-blob-rnum" data-line-number="11"></td>
+          <td id="file-mainactivity-java-LC11" class="blob-code blob-code-inner js-file-line">                if (sensors != null) {</td>
+        </tr>
+        <tr>
+          <td id="file-mainactivity-java-L12" class="blob-num js-line-number js-blob-rnum" data-line-number="12"></td>
+          <td id="file-mainactivity-java-LC12" class="blob-code blob-code-inner js-file-line">                    Timber.i(&quot;Server response with: %s&quot;, sensors);</td>
+        </tr>
+        <tr>
+          <td id="file-mainactivity-java-L13" class="blob-num js-line-number js-blob-rnum" data-line-number="13"></td>
+          <td id="file-mainactivity-java-LC13" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-mainactivity-java-L14" class="blob-num js-line-number js-blob-rnum" data-line-number="14"></td>
+          <td id="file-mainactivity-java-LC14" class="blob-code blob-code-inner js-file-line">                    adapter.updateResults(sensors);</td>
+        </tr>
+        <tr>
+          <td id="file-mainactivity-java-L15" class="blob-num js-line-number js-blob-rnum" data-line-number="15"></td>
+          <td id="file-mainactivity-java-LC15" class="blob-code blob-code-inner js-file-line">                    notificationService.checkSensorsState(sensors, mContext);</td>
+        </tr>
+        <tr>
+          <td id="file-mainactivity-java-L16" class="blob-num js-line-number js-blob-rnum" data-line-number="16"></td>
+          <td id="file-mainactivity-java-LC16" class="blob-code blob-code-inner js-file-line">                }</td>
+        </tr>
+        <tr>
+          <td id="file-mainactivity-java-L17" class="blob-num js-line-number js-blob-rnum" data-line-number="17"></td>
+          <td id="file-mainactivity-java-LC17" class="blob-code blob-code-inner js-file-line">                swipeRefreshLayout.setRefreshing(false);</td>
+        </tr>
+        <tr>
+          <td id="file-mainactivity-java-L18" class="blob-num js-line-number js-blob-rnum" data-line-number="18"></td>
+          <td id="file-mainactivity-java-LC18" class="blob-code blob-code-inner js-file-line">            }</td>
+        </tr>
+        <tr>
+          <td id="file-mainactivity-java-L19" class="blob-num js-line-number js-blob-rnum" data-line-number="19"></td>
+          <td id="file-mainactivity-java-LC19" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-mainactivity-java-L20" class="blob-num js-line-number js-blob-rnum" data-line-number="20"></td>
+          <td id="file-mainactivity-java-LC20" class="blob-code blob-code-inner js-file-line">            @Override</td>
+        </tr>
+        <tr>
+          <td id="file-mainactivity-java-L21" class="blob-num js-line-number js-blob-rnum" data-line-number="21"></td>
+          <td id="file-mainactivity-java-LC21" class="blob-code blob-code-inner js-file-line">            public void onFailure(@NonNull Call&lt;List&lt;Sensor&gt;&gt; call, @NonNull Throwable t) {</td>
+        </tr>
+        <tr>
+          <td id="file-mainactivity-java-L22" class="blob-num js-line-number js-blob-rnum" data-line-number="22"></td>
+          <td id="file-mainactivity-java-LC22" class="blob-code blob-code-inner js-file-line">                swipeRefreshLayout.setRefreshing(false);</td>
+        </tr>
+        <tr>
+          <td id="file-mainactivity-java-L23" class="blob-num js-line-number js-blob-rnum" data-line-number="23"></td>
+          <td id="file-mainactivity-java-LC23" class="blob-code blob-code-inner js-file-line">                Timber.e(t.getLocalizedMessage());</td>
+        </tr>
+        <tr>
+          <td id="file-mainactivity-java-L24" class="blob-num js-line-number js-blob-rnum" data-line-number="24"></td>
+          <td id="file-mainactivity-java-LC24" class="blob-code blob-code-inner js-file-line">                Toast.makeText(mContext, R.string.connection_error, Toast.LENGTH_LONG).show();</td>
+        </tr>
+        <tr>
+          <td id="file-mainactivity-java-L25" class="blob-num js-line-number js-blob-rnum" data-line-number="25"></td>
+          <td id="file-mainactivity-java-LC25" class="blob-code blob-code-inner js-file-line">            }</td>
+        </tr>
+        <tr>
+          <td id="file-mainactivity-java-L26" class="blob-num js-line-number js-blob-rnum" data-line-number="26"></td>
+          <td id="file-mainactivity-java-LC26" class="blob-code blob-code-inner js-file-line">        });</td>
+        </tr>
+        <tr>
+          <td id="file-mainactivity-java-L27" class="blob-num js-line-number js-blob-rnum" data-line-number="27"></td>
+          <td id="file-mainactivity-java-LC27" class="blob-code blob-code-inner js-file-line">    }</td>
+        </tr>
+  </table>
+</div>
+
+
+    </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/jezinka/c97df0b2239662750d056e552948bfdd/raw/4510f18d93036c0aac567a491978b3f5fd92721b/MainActivity.java" style="float:right" class="Link--inTextBlock">view raw</a>
+        <a href="https://gist.github.com/jezinka/c97df0b2239662750d056e552948bfdd#file-mainactivity-java" class="Link--inTextBlock">
+          MainActivity.java
+        </a>
+        hosted with &#10084; by <a class="Link--inTextBlock" href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+
+</div></figure>
+
+
+
+<p>Dzia&#322;anie aplikacji nie zmieni&#322;o si&#281; wcale, ale kod jest o wiele bardziej czytelny.</p>
+<fieldset><legend>Series Navigation</legend><span class="series-nav-left"><a href="/sensorki-podsumowanie-7/" title="&lt;&lt; Sensorki &ndash; podsumowanie &ndash; #8">&lt;&lt; Sensorki &ndash; podsumowanie &ndash; #8</a></span><span class="series-nav-right"></span></fieldset><div class="clear-me"></div><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon sd-sharing"><h3 class="sd-title">Podziel si&#281;:</h3><div class="sd-content"><ul><li class="share-twitter"><a rel="nofollow noopener noreferrer" data-shared="sharing-twitter-3550" class="share-twitter sd-button share-icon no-text" href="/sensorki-serverless-app-i-refaktoring-9/?share=twitter" target="_blank" aria-labelledby="sharing-twitter-3550">
+				<span id="sharing-twitter-3550" hidden>Click to share on X (Opens in new window)</span>
+				<span>X</span>
+			</a></li><li class="share-facebook"><a rel="nofollow noopener noreferrer" data-shared="sharing-facebook-3550" class="share-facebook sd-button share-icon no-text" href="/sensorki-serverless-app-i-refaktoring-9/?share=facebook" target="_blank" aria-labelledby="sharing-facebook-3550">
+				<span id="sharing-facebook-3550" hidden>Click to share on Facebook (Opens in new window)</span>
+				<span>Facebook</span>
+			</a></li><li class="share-end"></ul></div></div></div><div class="sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded" id="like-post-wrapper-143895758-3550-689c2ec0af25f" data-src="https://widgets.wp.com/likes/?ver=14.9.1#blog_id=143895758&amp;post_id=3550&amp;origin=paulinakaczmarek.pl&amp;obj_id=143895758-3550-689c2ec0af25f" data-name="like-post-frame-143895758-3550-689c2ec0af25f" data-title="Like or Reblog"><h3 class="sd-title">Like this:</h3><div class="likes-widget-placeholder post-likes-widget-placeholder" style="height: 55px;"><span class="button"><span>Like</span></span> <span class="loading">Loading...</span></div><span class="sd-text-color"></span><a class="sd-link-color"></a></div>
+<div id="jp-relatedposts" class="jp-relatedposts">
+	<h3 class="jp-relatedposts-headline"><em>Related</em></h3>
+</div>	</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+		<span class="cat-links">Posted in <a href="/category/sensorki/" rel="category tag">sensorki</a></span><span class="tags-links">Tagged <a href="/tag/android/" rel="tag">android</a>, <a href="/tag/sensorki/" rel="tag">sensorki</a>, <a href="/tag/moshi/" rel="tag">moshi</a></span>	</footer><!-- .entry-footer -->
+</article><!-- #post-3550 -->
+
+	<nav class="navigation post-navigation" aria-label="Wpisy">
+		<h2 class="screen-reader-text">Nawigacja wpisu</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="/sudoku-solver-tym-razem-nie-wyszlo-post-mortem/" rel="prev">&bdquo;Sudoku solver&rdquo; &ndash; tym razem nie wysz&#322;o &ndash; post mortem</a></div><div class="nav-next"><a href="/clob-in-clob-out-grails-sql/" rel="next">CLOB in &ndash; CLOB out -&gt; Grails + SQL</a></div></div>
+	</nav>
+<div id="comments" class="comments-area">
+
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Dodaj komentarz <small><a rel="nofollow" id="cancel-comment-reply-link" href="/sensorki-serverless-app-i-refaktoring-9/#respond" style="display:none;">Anuluj pisanie odpowiedzi</a></small></h3><form action="/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate><p class="comment-notes"><span id="email-notes">Tw&oacute;j adres e-mail nie zostanie opublikowany.</span> <span class="required-field-message">Wymagane pola s&#261; oznaczone <span class="required">*</span></span></p><div class="form-row"><p class="comment-form-comment form-group col-md-12"><textarea class="form-control" placeholder="Message..." id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author form-group col-md-4"><input class="form-control" placeholder="Name *" id="author" name="author" type="text" value="" size="30" maxlength="245" required="required"></p>
+<p class="comment-form-email form-group col-md-4"><input class="form-control" placeholder="Email *" id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" required="required"></p>
+<p class="comment-form-url form-group col-md-4"> <input class="form-control" placeholder="Website" id="url" name="url" type="url" value="" size="30" maxlength="200"></p></div>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"> <label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label></p>
+<p class="comment-subscription-form"><input type="checkbox" name="subscribe_comments" id="subscribe_comments" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;"> <label class="subscribe-label" id="subscribe-label" for="subscribe_comments">Notify me of follow-up comments by email.</label></p><p class="comment-subscription-form"><input type="checkbox" name="subscribe_blog" id="subscribe_blog" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;"> <label class="subscribe-label" id="subscribe-blog-label" for="subscribe_blog">Notify me of new posts by email.</label></p><p class="form-submit"><input name="submit" type="submit" id="submit" class="submit btn btn-primary" value="Opublikuj komentarz"> <input type="hidden" name="comment_post_ID" value="3550" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="c8bded74b6"></p><p style="display: none !important;" class="akismet-fields-container" data-prefix="ak_"><label>&Delta;<textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_1" name="ak_js" value="2"><script>document.getElementById( "ak_js_1" ).setAttribute( "value", ( new Date() ).getTime() );</script></p></form>	</div><!-- #respond -->
+	<p class="akismet_comment_form_privacy_notice">Ta strona u&#380;ywa Akismet do redukcji spamu. <a href="https://akismet.com/privacy/" target="_blank" rel="nofollow noopener">Dowiedz si&#281;, w jaki spos&oacute;b przetwarzane s&#261; dane Twoich komentarzy.</a></p>
+</div><!-- #comments -->
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+
+<aside id="secondary" class="widget-area col-lg-4">
+	<section id="search-2" class="widget widget_search"><form role="search" method="get" class="io-search-form form-row" action="/">
+        <div class="form-group col-lg-8">
+            <input type="text" class="search-field form-control" placeholder="Search &hellip;" value="" name="s">
+        </div><!-- /.col-sm-2 -->
+        <div class="form-group col-lg-4">
+            <input type="submit" class="submit btn btn-primary btn-block" value="Search">
+        </div><!-- /.col-sm-2 -->
+</form></section>
+		<section id="recent-posts-2" class="widget widget_recent_entries">
+		<h2 class="widget-title">Ostatnie wpisy</h2>
+		<ul>
+											<li>
+					<a href="/groovy-sudoku-backtracking-ostatnie-starcie/">[groovy] Sudoku Backtracking &ndash; ostatnie starcie</a>
+									</li>
+											<li>
+					<a href="/clob-in-clob-out-grails-sql/">CLOB in &ndash; CLOB out -&gt; Grails + SQL</a>
+									</li>
+											<li>
+					<a href="/sensorki-serverless-app-i-refaktoring-9/" aria-current="page">Sensorki &ndash; Serverless app i refaktoring &ndash; #9</a>
+									</li>
+											<li>
+					<a href="/sudoku-solver-tym-razem-nie-wyszlo-post-mortem/">&bdquo;Sudoku solver&rdquo; &ndash; tym razem nie wysz&#322;o &ndash; post mortem</a>
+									</li>
+											<li>
+					<a href="/sensorki-podsumowanie-7/">Sensorki &ndash; podsumowanie &ndash; #8</a>
+									</li>
+					</ul>
+
+		</section><section id="recent-comments-2" class="widget widget_recent_comments"><h2 class="widget-title">Najnowsze komentarze</h2><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">paulinakaczmarek</span> - <a href="/sensorki-aplikacja-pogodowa-0/#comment-83">Sensorki &ndash; aplikacja &bdquo;pogodowa&rdquo; &ndash; #0</a></li><li class="recentcomments"><span class="comment-author-link"><a href="http://github.com/users/ghostbuster91" class="url" rel="ugc external nofollow">Kasper</a></span> - <a href="/sensorki-aplikacja-pogodowa-0/#comment-82">Sensorki &ndash; aplikacja &bdquo;pogodowa&rdquo; &ndash; #0</a></li><li class="recentcomments"><span class="comment-author-link"><a href="https://paulinakaczmarek.wordpress.com/kobieta-w-it-programistka/" class="url" rel="ugc external nofollow">Kobieta w IT != programistka &ndash; #1B &ndash; Paulina's Sandbox</a></span> - <a href="/kobieta-w-it-programistka-1d/#comment-31">Kobieta w IT == programistka &ndash; #1D</a></li><li class="recentcomments"><span class="comment-author-link">kjgm</span> - <a href="/python-challenge-00/#comment-35">Python Challenge &ndash; #00</a></li><li class="recentcomments"><span class="comment-author-link"><a href="https://plus.google.com/113840959268978039398" class="url" rel="ugc external nofollow">de9ka</a></span> - <a href="/conaobiad-release-wersji-alpha-23/#comment-34">CoNaObiad &ndash; release wersji alpha &ndash; #23</a></li></ul></section><section id="archives-2" class="widget widget_archive"><h2 class="widget-title">Archiwa</h2>
+			<ul>
+					<li><a href="/2020/05/">maj 2020</a></li>
+	<li><a href="/2019/04/">kwiecie&#324; 2019</a></li>
+	<li><a href="/2019/02/">luty 2019</a></li>
+	<li><a href="/2018/10/">pa&#378;dziernik 2018</a></li>
+	<li><a href="/2018/08/">sierpie&#324; 2018</a></li>
+	<li><a href="/2018/07/">lipiec 2018</a></li>
+	<li><a href="/2018/04/">kwiecie&#324; 2018</a></li>
+	<li><a href="/2018/03/">marzec 2018</a></li>
+	<li><a href="/2018/01/">stycze&#324; 2018</a></li>
+	<li><a href="/2017/12/">grudzie&#324; 2017</a></li>
+	<li><a href="/2017/11/">listopad 2017</a></li>
+	<li><a href="/2017/10/">pa&#378;dziernik 2017</a></li>
+	<li><a href="/2017/09/">wrzesie&#324; 2017</a></li>
+	<li><a href="/2017/08/">sierpie&#324; 2017</a></li>
+	<li><a href="/2017/07/">lipiec 2017</a></li>
+	<li><a href="/2017/06/">czerwiec 2017</a></li>
+	<li><a href="/2017/05/">maj 2017</a></li>
+	<li><a href="/2017/04/">kwiecie&#324; 2017</a></li>
+	<li><a href="/2017/03/">marzec 2017</a></li>
+			</ul>
+
+			</section><section id="categories-2" class="widget widget_categories"><h2 class="widget-title">Kategorie</h2>
+			<ul>
+					<li class="cat-item cat-item-173"><a href="/category/bez_kodu/">Bez kodu</a>
+</li>
+	<li class="cat-item cat-item-162"><a href="/category/chaos/">Chaos</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="/category/conaobiad/">CoNaObiad</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="/category/daj-sie-poznac-2017/">Daj Si&#281; Pozna&#263; 2017</a>
+</li>
+	<li class="cat-item cat-item-137"><a href="/category/nanodegree/">Google Udacity Scholarship</a>
+</li>
+	<li class="cat-item cat-item-145"><a href="/category/groovy/">groovy</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="/category/kotlin/">kotlin</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="/category/ksiazki/">ksi&#261;&#380;ki</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="/category/odjazd/">Odjazd</a>
+</li>
+	<li class="cat-item cat-item-141"><a href="/category/project-euler/">project euler</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="/category/python-challenge/">python challenge</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="/category/refaktoring-kodu/">Refaktoring kodu</a>
+</li>
+	<li class="cat-item cat-item-152"><a href="/category/sensorki/">sensorki</a>
+</li>
+	<li class="cat-item cat-item-189"><a href="/category/sudoku/">sudoku</a>
+</li>
+			</ul>
+
+			</section></aside><!-- #secondary -->
+
+	</div><!-- #content -->
+
+	<footer id="colophon" class="site-footer row">
+		<div class="site-info col">
+			<a href="https://wordpress.org/">
+				Proudly powered by WordPress			</a>
+			<span class="sep"> | </span>
+				Theme: ioboot by <a href="http://iotheme.com/">ioTheme</a>.		</div><!-- .site-info col -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+				<script type='text/javascript'><!--
+			var seriesdropdown = document.getElementById("orgseries_dropdown");
+			if (seriesdropdown) {
+			 function onSeriesChange() {
+					if ( seriesdropdown.options[seriesdropdown.selectedIndex].value != ( 0 || -1 ) ) {
+						location.href = "/series/"+seriesdropdown.options[seriesdropdown.selectedIndex].value;
+					}
+				}
+				seriesdropdown.onchange = onSeriesChange;
+			}
+			--></script>
+			    <div class="jlplg-lovecoding-cookie-info-container jlplg-hidden" style="--jlplg-buton-bg-color: #dcf1ff; background-color: #444546; bottom: 0" id="jlplg-lovecoding-cookie-info-container">
+        <form method="post" id="cookie-form"> 
+            <p class="jlplg-lovecoding-cookie-info" style="color: #ffffff">We use cookies to improve your experience on our website. By browsing this website, you agree to our use of cookies</p>
+            <div class="jlplg-lovecoding-buttons">
+            <button type="submit" name="jlplg-cookie-accept-button" class="jlplg-lovecoding-cookie-accept-button" id="cookie-accept-button" style="background-color: #dcf1ff" data-expire="30">
+                <span class="button-text" style="color: #000000">Accept Cookies</span>
+            </button>
+                        </div>
+        </form>
+    </div>
+
+	<script type="text/javascript">
+		window.WPCOM_sharing_counts = {"\/sensorki-serverless-app-i-refaktoring-9\/":3550};
+	</script>
+				<link rel="stylesheet" id="jetpack-gist-styling-css" href="https://github.githubassets.com/assets/gist-embed-59543e005c9c.css?ver=14.9.1" type="text/css" media="all">
+<script type="text/javascript" src="/wp-content/plugins/simple-cookie-notice/public/js/jlplg_lovecoding_script.js?ver=1755066046" id="jlplg_lovecoding_script-js"></script>
+<script type="text/javascript" src="/wp-content/themes/ioboot/js/skip-link-focus-fix.js?ver=20151215" id="ioboot-skip-link-focus-fix-js"></script>
+<script type="text/javascript" src="/wp-content/themes/ioboot/js/bootstrap.js?ver=6.x.x" id="ioboot-bootstrap-js-js"></script>
+<script type="text/javascript" src="/wp-content/themes/ioboot/js/custom.js?ver=1.0.0" id="ioboot-custom-js-js"></script>
+<script type="text/javascript" src="/wp-includes/js/comment-reply.min.js?ver=6.7.3" id="comment-reply-js" async="async" data-wp-strategy="async"></script>
+<script type="text/javascript" id="jetpack-stats-js-before">
+/* <![CDATA[ */
+_stq = window._stq || [];
+_stq.push([ "view", JSON.parse("{\"v\":\"ext\",\"blog\":\"143895758\",\"post\":\"3550\",\"tz\":\"2\",\"srv\":\"paulinakaczmarek.pl\",\"j\":\"1:14.9.1\"}") ]);
+_stq.push([ "clickTrackerInit", "143895758", "3550" ]);
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://stats.wp.com/e-202533.js" id="jetpack-stats-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" src="/wp-content/plugins/jetpack/_inc/build/likes/queuehandler.min.js?ver=14.9.1" id="jetpack_likes_queuehandler-js"></script>
+<script defer type="text/javascript" src="/wp-content/plugins/akismet/_inc/akismet-frontend.js?ver=1752646169" id="akismet-frontend-js"></script>
+<script type="text/javascript" id="sharing-js-js-extra">
+/* <![CDATA[ */
+var sharing_js_options = {"lang":"en","counts":"1","is_stats_active":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wp-content/plugins/jetpack/_inc/build/sharedaddy/sharing.min.js?ver=14.9.1" id="sharing-js-js"></script>
+<script type="text/javascript" id="sharing-js-js-after">
+/* <![CDATA[ */
+var windowOpen;
+			( function () {
+				function matches( el, sel ) {
+					return !! (
+						el.matches && el.matches( sel ) ||
+						el.msMatchesSelector && el.msMatchesSelector( sel )
+					);
+				}
+
+				document.body.addEventListener( 'click', function ( event ) {
+					if ( ! event.target ) {
+						return;
+					}
+
+					var el;
+					if ( matches( event.target, 'a.share-twitter' ) ) {
+						el = event.target;
+					} else if ( event.target.parentNode && matches( event.target.parentNode, 'a.share-twitter' ) ) {
+						el = event.target.parentNode;
+					}
+
+					if ( el ) {
+						event.preventDefault();
+
+						// If there's another sharing window open, close it.
+						if ( typeof windowOpen !== 'undefined' ) {
+							windowOpen.close();
+						}
+						windowOpen = window.open( el.getAttribute( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+						return false;
+					}
+				} );
+			} )();
+var windowOpen;
+			( function () {
+				function matches( el, sel ) {
+					return !! (
+						el.matches && el.matches( sel ) ||
+						el.msMatchesSelector && el.msMatchesSelector( sel )
+					);
+				}
+
+				document.body.addEventListener( 'click', function ( event ) {
+					if ( ! event.target ) {
+						return;
+					}
+
+					var el;
+					if ( matches( event.target, 'a.share-facebook' ) ) {
+						el = event.target;
+					} else if ( event.target.parentNode && matches( event.target.parentNode, 'a.share-facebook' ) ) {
+						el = event.target.parentNode;
+					}
+
+					if ( el ) {
+						event.preventDefault();
+
+						// If there's another sharing window open, close it.
+						if ( typeof windowOpen !== 'undefined' ) {
+							windowOpen.close();
+						}
+						windowOpen = window.open( el.getAttribute( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+						return false;
+					}
+				} );
+			} )();
+/* ]]> */
+</script>
+	<iframe src="https://widgets.wp.com/likes/master.html?ver=20250813#ver=20250813&amp;lang=pl" scrolling="no" id="likes-master" name="likes-master" style="display:none;"></iframe>
+	<div id="likes-other-gravatars" role="dialog" aria-hidden="true" tabindex="-1"><div class="likes-text"><span>%d</span></div><ul class="wpl-avatars sd-like-gravatars"></ul></div>
+	
+</body>
+</html>

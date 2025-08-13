@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<title>project euler &ndash; Paulina's sandbox</title>
+<meta name="robots" content="max-image-preview:large">
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	<link rel="dns-prefetch" href="//secure.gravatar.com">
+<link rel="dns-prefetch" href="//stats.wp.com">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//v0.wordpress.com">
+<link rel="dns-prefetch" href="//widgets.wp.com">
+<link rel="dns-prefetch" href="//s0.wp.com">
+<link rel="dns-prefetch" href="//0.gravatar.com">
+<link rel="dns-prefetch" href="//1.gravatar.com">
+<link rel="dns-prefetch" href="//2.gravatar.com">
+<link rel="preconnect" href="//i0.wp.com">
+<link rel="alternate" type="application/rss+xml" title="Paulina's sandbox &raquo; Kana&#322; z wpisami" href="/feed/">
+<link rel="alternate" type="application/rss+xml" title="Paulina's sandbox &raquo; Kana&#322; z komentarzami" href="/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Paulina's sandbox &raquo; Kana&#322; z wpisami zaszufladkowanymi do kategorii project euler" href="/category/project-euler/feed/">
+<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.7.3"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\u2b1b","\ud83d\udc26\u200b\u2b1b")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<style id="wp-emoji-styles-inline-css" type="text/css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel="stylesheet" id="wp-block-library-css" href="/wp-content/plugins/gutenberg/build/block-library/style.css?ver=21.3.0" type="text/css" media="all">
+<style id="pdfemb-pdf-embedder-viewer-style-inline-css" type="text/css">
+.wp-block-pdfemb-pdf-embedder-viewer{max-width:none}
+
+</style>
+<link rel="stylesheet" id="mediaelement-css" href="/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css?ver=4.2.17" type="text/css" media="all">
+<link rel="stylesheet" id="wp-mediaelement-css" href="/wp-includes/js/mediaelement/wp-mediaelement.min.css?ver=6.7.3" type="text/css" media="all">
+<style id="jetpack-sharing-buttons-style-inline-css" type="text/css">
+.jetpack-sharing-buttons__services-list{display:flex;flex-direction:row;flex-wrap:wrap;gap:0;list-style-type:none;margin:5px;padding:0}.jetpack-sharing-buttons__services-list.has-small-icon-size{font-size:12px}.jetpack-sharing-buttons__services-list.has-normal-icon-size{font-size:16px}.jetpack-sharing-buttons__services-list.has-large-icon-size{font-size:24px}.jetpack-sharing-buttons__services-list.has-huge-icon-size{font-size:36px}@media print{.jetpack-sharing-buttons__services-list{display:none!important}}.editor-styles-wrapper .wp-block-jetpack-sharing-buttons{gap:0;padding-inline-start:0}ul.jetpack-sharing-buttons__services-list.has-background{padding:1.25em 2.375em}
+</style>
+<style id="classic-theme-styles-inline-css" type="text/css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id="global-styles-inline-css" type="text/css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+</style>
+<link rel="stylesheet" id="styles-css" href="/wp-content/plugins/simple-cookie-notice/styles.css?ver=6.7.3" type="text/css" media="all">
+<link rel="stylesheet" id="orgseries-default-css-css" href="/wp-content/plugins/organize-series/orgSeries.css?ver=6.7.3" type="text/css" media="all">
+<link rel="stylesheet" id="ioboot-bootstrap-css" href="/wp-content/themes/ioboot/css/bootstrap.css?ver=6.7.3" type="text/css" media="all">
+<link rel="stylesheet" id="dashicons-css" href="/wp-includes/css/dashicons.min.css?ver=6.7.3" type="text/css" media="all">
+<link rel="stylesheet" id="ioboot-style-css" href="/wp-content/themes/ioboot/style.css?ver=6.7.3" type="text/css" media="all">
+<link rel="stylesheet" id="ioboot-font-css" href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed%3A400%2C700&amp;ver=6.7.3" type="text/css" media="all">
+<link rel="stylesheet" id="jetpack_likes-css" href="/wp-content/plugins/jetpack/modules/likes/style.css?ver=14.9.1" type="text/css" media="all">
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<link rel="https://api.w.org/" href="/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="/wp-json/wp/v2/categories/141"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 6.7.3">
+	<style>img#wpstats{display:none}</style>
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="project euler &ndash; Paulina's sandbox">
+<meta property="og:url" content="/category/project-euler/">
+<meta property="og:site_name" content="Paulina's sandbox">
+<meta property="og:image" content="https://s0.wp.com/i/blank.jpg">
+<meta property="og:image:width" content="200">
+<meta property="og:image:height" content="200">
+<meta property="og:image:alt" content="">
+<meta property="og:locale" content="pl_PL">
+
+<!-- End Jetpack Open Graph Tags -->
+</head>
+
+<body class="archive category category-project-euler category-141 hfeed">
+<div id="page" class="site container">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+	<header id="masthead" class="site-header row">
+		<div class="site-branding col-sm-3">
+							<p class="site-title"><a href="/" rel="home">Paulina's sandbox</a></p>
+						</div><!-- .site-branding -->
+
+		<nav id="site-navigation" class="main-navigation col-sm-9"><div class="io-menu io-menu-desktop">
+			
+			<div class="menu-main_menu-container"><ul id="primary-menu" class="menu"><li id="menu-item-3377" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-3377"><a href="/">Strona g&#322;&oacute;wna</a></li>
+<li id="menu-item-3376" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3376"><a href="/o-mnie/">O mnie</a></li>
+<li id="menu-item-3383" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-3383"><a href="/projekty/">Projekty</a>
+<ul class="sub-menu">
+	<li id="menu-item-3458" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3458"><a href="/category/sensorki/">sensorki</a></li>
+	<li id="menu-item-3378" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3378"><a href="/category/conaobiad/">CoNaObiad</a></li>
+	<li id="menu-item-3379" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3379"><a href="/category/odjazd/">Odjazd</a></li>
+	<li id="menu-item-3380" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3380"><a href="/category/python-challenge/">Python challenge</a></li>
+	<li id="menu-item-3381" class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item menu-item-3381"><a href="/category/project-euler/" aria-current="page">project euler</a></li>
+	<li id="menu-item-3443" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3443"><a href="/category/chaos/">Chaos</a></li>
+</ul>
+</li>
+<li id="menu-item-3499" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3499"><a href="/category/bez_kodu/">Teksty bez kodu</a></li>
+</ul></div>		</div><!-- .io-menu --></nav><!-- #site-navigation -->
+	</header><!-- #masthead -->
+
+	<div id="content" class="site-content row">
+
+	<div id="primary" class="content-area col-lg-8">
+		<main id="main" class="site-main">
+
+		
+			<header class="page-header">
+				<h1 class="page-title">Kategoria: <span>project euler</span></h1>			</header><!-- .page-header -->
+
+			
+<article id="post-3349" class="post-3349 post type-post status-publish format-standard has-post-thumbnail hentry category-project-euler tag-python tag-project-euler tag-sliding-window-technique">
+	<header class="entry-header">
+		<h2 class="entry-title"><a href="/projekt-euler-zadanie-8-window-sliding-technique/" rel="bookmark">Projekt Euler &ndash; zadanie 8 &ndash; Window sliding technique</a></h2>			<div class="entry-meta">
+				<span class="posted-on">Posted on <a href="/projekt-euler-zadanie-8-window-sliding-technique/" rel="bookmark"><time class="entry-date published" datetime="2018-07-06T08:26:49+02:00">6 lipca 2018</time><time class="updated" datetime="2018-08-13T17:24:40+02:00">13 sierpnia 2018</time></a></span><span class="byline"> by <span class="author vcard"><a class="url fn n" href="/author/paulinakaczmarek/">paulinakaczmarek</a></span></span>			</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+
+	
+		<a class="post-thumbnail" href="/projekt-euler-zadanie-8-window-sliding-technique/" aria-hidden="true" tabindex="-1">
+			<img width="1920" height="1280" src="/wp-content/uploads/2018/07/calendar-2428560_1920.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Projekt Euler &ndash; zadanie 8 &ndash; Window sliding technique" decoding="async" fetchpriority="high" srcset="https://i0.wp.com/paulinakaczmarek.pl/wp-content/uploads/2018/07/calendar-2428560_1920.jpg?w=1920&amp;ssl=1 1920w, https://i0.wp.com/paulinakaczmarek.pl/wp-content/uploads/2018/07/calendar-2428560_1920.jpg?resize=300%2C200&amp;ssl=1 300w, https://i0.wp.com/paulinakaczmarek.pl/wp-content/uploads/2018/07/calendar-2428560_1920.jpg?resize=768%2C512&amp;ssl=1 768w, https://i0.wp.com/paulinakaczmarek.pl/wp-content/uploads/2018/07/calendar-2428560_1920.jpg?resize=1024%2C683&amp;ssl=1 1024w, https://i0.wp.com/paulinakaczmarek.pl/wp-content/uploads/2018/07/calendar-2428560_1920.jpg?resize=809%2C539&amp;ssl=1 809w, https://i0.wp.com/paulinakaczmarek.pl/wp-content/uploads/2018/07/calendar-2428560_1920.jpg?w=1280&amp;ssl=1 1280w" sizes="(max-width: 1920px) 100vw, 1920px" data-attachment-id="3350" data-permalink="/projekt-euler-zadanie-8-window-sliding-technique/calendar-2428560_1920/" data-orig-file="https://i0.wp.com/paulinakaczmarek.pl/wp-content/uploads/2018/07/calendar-2428560_1920.jpg?fit=1920%2C1280&amp;ssl=1" data-orig-size="1920,1280" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;4.5&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;Canon EOS 600D&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;33&quot;,&quot;iso&quot;:&quot;400&quot;,&quot;shutter_speed&quot;:&quot;0.016666666666667&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="calendar-2428560_1920" data-image-description="" data-image-caption="" data-medium-file="https://i0.wp.com/paulinakaczmarek.pl/wp-content/uploads/2018/07/calendar-2428560_1920.jpg?fit=300%2C200&amp;ssl=1" data-large-file="https://i0.wp.com/paulinakaczmarek.pl/wp-content/uploads/2018/07/calendar-2428560_1920.jpg?fit=640%2C427&amp;ssl=1">		</a>
+
+		
+	<div class="entry-content">
+		<p>Rozwi&#261;zuj&#281; sobie ostatnio zadania z Projektu Euler i natrafi&#322;am na&nbsp;<a href="https://projecteuler.net/problem=8">zadanie 8</a>, kt&oacute;re zainspirowa&#322;o mnie do tej notki.</p>
+<p><img data-recalc-dims="1" decoding="async" data-attachment-id="3353" data-permalink="/projekt-euler-zadanie-8-window-sliding-technique/zaznaczenie_044/" data-orig-file="https://i0.wp.com/paulinakaczmarek.pl/wp-content/uploads/2018/07/Zaznaczenie_044.png?fit=1050%2C545&amp;ssl=1" data-orig-size="1050,545" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Zaznaczenie_044" data-image-description="" data-image-caption="" data-medium-file="https://i0.wp.com/paulinakaczmarek.pl/wp-content/uploads/2018/07/Zaznaczenie_044.png?fit=300%2C156&amp;ssl=1" data-large-file="https://i0.wp.com/paulinakaczmarek.pl/wp-content/uploads/2018/07/Zaznaczenie_044.png?fit=640%2C333&amp;ssl=1" class="size-large wp-image-3353 aligncenter" src="https://i0.wp.com/paulinakaczmarek.pl/wp-content/uploads/2018/07/Zaznaczenie_044-1024x532.png?resize=640%2C333&amp;ssl=1" alt="" width="640" height="333" srcset="https://i0.wp.com/paulinakaczmarek.pl/wp-content/uploads/2018/07/Zaznaczenie_044.png?resize=1024%2C532&amp;ssl=1 1024w, https://i0.wp.com/paulinakaczmarek.pl/wp-content/uploads/2018/07/Zaznaczenie_044.png?resize=300%2C156&amp;ssl=1 300w, https://i0.wp.com/paulinakaczmarek.pl/wp-content/uploads/2018/07/Zaznaczenie_044.png?resize=768%2C399&amp;ssl=1 768w, https://i0.wp.com/paulinakaczmarek.pl/wp-content/uploads/2018/07/Zaznaczenie_044.png?resize=809%2C420&amp;ssl=1 809w, https://i0.wp.com/paulinakaczmarek.pl/wp-content/uploads/2018/07/Zaznaczenie_044.png?w=1050&amp;ssl=1 1050w" sizes="(max-width: 640px) 100vw, 640px"></p>
+<p>Najwi&#281;kszy iloczyn 13 kolejnych cyfr z 1000 cyfrowej liczby &#128578; Mo&#380;na to zrobi&#263; najpro&#347;ciej &ndash; p&#281;tla po wszystkich cyfrach, a potem branie 13 kolejnych cyfr. Wynik dla 4 kolejnych cyfr, kt&oacute;ry jest podany w tre&#347;ci zadania wykorzystam jako test sprawdzaj&#261;cy.</p>
+<style>.gist table { margin-bottom: 0; }</style>
+<div style="tab-size: 8" id="gist90493789" class="gist">
+<div class="gist-file" translate="no" data-color-mode="light" data-light-theme="light">
+<div class="gist-data">
+<div class="js-gist-file-update-container js-task-list-container">
+<div id="file-brute_force-py" class="file my-2">
+<div itemprop="text" class="Box-body p-0 blob-wrapper data type-python  " style="overflow: auto" tabindex="0" role="region" aria-label="brute_force.py content, created by jezinka on 04:20PM on July 02, 2018.">
+<div class="js-check-hidden-unicode js-blob-code-container blob-code-content">
+<p>  <template class="js-file-alert-template"></template></p>
+<div data-view-component="true" class="flash flash-warn flash-full d-flex flex-items-center">
+  <svg aria-hidden="true" height="16" viewbox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">
+    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
+</svg><br>
+    <span><br>
+      This file contains hidden or bidirectional Unicode text that may be interpreted or compiled differently than what appears below. To review, open the file in an editor that reveals hidden Unicode characters.<br>
+      <a class="Link--inTextBlock" href="https://github.co/hiddenchars" target="_blank">Learn more about bidirectional Unicode characters</a><br>
+    </span>
+<div data-view-component="true" class="flash-action">        <a href="/category/project-euler/%7B%7B%20revealButtonHref%20%7D%7D" data-view-component="true" class="btn-sm btn">    Show hidden characters<br>
+</a>
+</div>
+</div>
+<p><br>
+<template class="js-line-alert-template"><br>
+  <span aria-label="This line has hidden Unicode characters" data-view-component="true" class="line-alert tooltipped tooltipped-e"><br>
+    <svg aria-hidden="true" height="16" viewbox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">
+    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
+</svg><br>
+</span></template></p>
+<table data-hpc class="highlight tab-size js-file-line-container" data-tab-size="4" data-paste-markdown-skip data-tagsearch-path="brute_force.py">
+<tr>
+<td id="file-brute_force-py-L1" class="blob-num js-line-number js-blob-rnum" data-line-number="1"></td>
+<td id="file-brute_force-py-LC1" class="blob-code blob-code-inner js-file-line">def ex8(window_size):</td>
+</tr>
+<tr>
+<td id="file-brute_force-py-L2" class="blob-num js-line-number js-blob-rnum" data-line-number="2"></td>
+<td id="file-brute_force-py-LC2" class="blob-code blob-code-inner js-file-line">    large_number = open(&quot;source.txt&quot;, 'r').read()</td>
+</tr>
+<tr>
+<td id="file-brute_force-py-L3" class="blob-num js-line-number js-blob-rnum" data-line-number="3"></td>
+<td id="file-brute_force-py-LC3" class="blob-code blob-code-inner js-file-line">
+</td>
+</tr>
+<tr>
+<td id="file-brute_force-py-L4" class="blob-num js-line-number js-blob-rnum" data-line-number="4"></td>
+<td id="file-brute_force-py-LC4" class="blob-code blob-code-inner js-file-line">    max_product = 1</td>
+</tr>
+<tr>
+<td id="file-brute_force-py-L5" class="blob-num js-line-number js-blob-rnum" data-line-number="5"></td>
+<td id="file-brute_force-py-LC5" class="blob-code blob-code-inner js-file-line">    for i in range(0, len(large_number)):</td>
+</tr>
+<tr>
+<td id="file-brute_force-py-L6" class="blob-num js-line-number js-blob-rnum" data-line-number="6"></td>
+<td id="file-brute_force-py-LC6" class="blob-code blob-code-inner js-file-line">        product = 1</td>
+</tr>
+<tr>
+<td id="file-brute_force-py-L7" class="blob-num js-line-number js-blob-rnum" data-line-number="7"></td>
+<td id="file-brute_force-py-LC7" class="blob-code blob-code-inner js-file-line">        if i + window_size &lt;= len(large_number):</td>
+</tr>
+<tr>
+<td id="file-brute_force-py-L8" class="blob-num js-line-number js-blob-rnum" data-line-number="8"></td>
+<td id="file-brute_force-py-LC8" class="blob-code blob-code-inner js-file-line">            for j in range(i, i + window_size):</td>
+</tr>
+<tr>
+<td id="file-brute_force-py-L9" class="blob-num js-line-number js-blob-rnum" data-line-number="9"></td>
+<td id="file-brute_force-py-LC9" class="blob-code blob-code-inner js-file-line">                product *= int(large_number[j])</td>
+</tr>
+<tr>
+<td id="file-brute_force-py-L10" class="blob-num js-line-number js-blob-rnum" data-line-number="10"></td>
+<td id="file-brute_force-py-LC10" class="blob-code blob-code-inner js-file-line">        max_product = max(max_product, product)</td>
+</tr>
+<tr>
+<td id="file-brute_force-py-L11" class="blob-num js-line-number js-blob-rnum" data-line-number="11"></td>
+<td id="file-brute_force-py-LC11" class="blob-code blob-code-inner js-file-line">
+</td>
+</tr>
+<tr>
+<td id="file-brute_force-py-L12" class="blob-num js-line-number js-blob-rnum" data-line-number="12"></td>
+<td id="file-brute_force-py-LC12" class="blob-code blob-code-inner js-file-line">    return max_product</td>
+</tr>
+<tr>
+<td id="file-brute_force-py-L13" class="blob-num js-line-number js-blob-rnum" data-line-number="13"></td>
+<td id="file-brute_force-py-LC13" class="blob-code blob-code-inner js-file-line">
+</td>
+</tr>
+<tr>
+<td id="file-brute_force-py-L14" class="blob-num js-line-number js-blob-rnum" data-line-number="14"></td>
+<td id="file-brute_force-py-LC14" class="blob-code blob-code-inner js-file-line">
+</td>
+</tr>
+<tr>
+<td id="file-brute_force-py-L15" class="blob-num js-line-number js-blob-rnum" data-line-number="15"></td>
+<td id="file-brute_force-py-LC15" class="blob-code blob-code-inner js-file-line">assert ex8(4) == 5832</td>
+</tr>
+<tr>
+<td id="file-brute_force-py-L16" class="blob-num js-line-number js-blob-rnum" data-line-number="16"></td>
+<td id="file-brute_force-py-LC16" class="blob-code blob-code-inner js-file-line">print(ex8(13))</td>
+</tr>
+</table>
+</div></div>
+</div>
+</div></div>
+<div class="gist-meta">
+        <a href="https://gist.github.com/jezinka/666182658ca933dc31928a41d432cc17/raw/d049c1db13326472adc3c7d49ada56555e4fa71e/brute_force.py" style="float:right" class="Link--inTextBlock">view raw</a><br>
+        <a href="https://gist.github.com/jezinka/666182658ca933dc31928a41d432cc17#file-brute_force-py" class="Link--inTextBlock"><br>
+          brute_force.py<br>
+        </a><br>
+        hosted with &#10084; by <a class="Link--inTextBlock" href="https://github.com/">GitHub</a>
+      </div>
+</div>
+</div>
+<p>Niestety, nie optymalne, z&#322;o&#380;ono&#347;&#263; czasowa a&#380; O(n*k). Dla 4 liczb mamy 4 * 1000 obrot&oacute;w w p&#281;tli, ale dla 13 to ju&#380; 13000. A gdyby liczba by&#322;a 10, 100 razy wi&#281;ksza? Musi by&#263; inny spos&oacute;b&hellip; I jest.</p>
+<p>Window sliding technique &ndash; technika przesuwanego okienka. Mo&#380;na to sobie wyobrazi&#263; jako kalendarz z przesuwanym na ta&#347;mie okienkiem:</p>
+<p><img data-recalc-dims="1" decoding="async" data-attachment-id="3350" data-permalink="/projekt-euler-zadanie-8-window-sliding-technique/calendar-2428560_1920/" data-orig-file="https://i0.wp.com/paulinakaczmarek.pl/wp-content/uploads/2018/07/calendar-2428560_1920.jpg?fit=1920%2C1280&amp;ssl=1" data-orig-size="1920,1280" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;4.5&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;Canon EOS 600D&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;33&quot;,&quot;iso&quot;:&quot;400&quot;,&quot;shutter_speed&quot;:&quot;0.016666666666667&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="calendar-2428560_1920" data-image-description="" data-image-caption="" data-medium-file="https://i0.wp.com/paulinakaczmarek.pl/wp-content/uploads/2018/07/calendar-2428560_1920.jpg?fit=300%2C200&amp;ssl=1" data-large-file="https://i0.wp.com/paulinakaczmarek.pl/wp-content/uploads/2018/07/calendar-2428560_1920.jpg?fit=640%2C427&amp;ssl=1" class="size-medium wp-image-3350 aligncenter" src="https://i0.wp.com/paulinakaczmarek.pl/wp-content/uploads/2018/07/calendar-2428560_1920-300x200.jpg?resize=300%2C200&amp;ssl=1" alt="" width="300" height="200" srcset="https://i0.wp.com/paulinakaczmarek.pl/wp-content/uploads/2018/07/calendar-2428560_1920.jpg?resize=300%2C200&amp;ssl=1 300w, https://i0.wp.com/paulinakaczmarek.pl/wp-content/uploads/2018/07/calendar-2428560_1920.jpg?resize=768%2C512&amp;ssl=1 768w, https://i0.wp.com/paulinakaczmarek.pl/wp-content/uploads/2018/07/calendar-2428560_1920.jpg?resize=1024%2C683&amp;ssl=1 1024w, https://i0.wp.com/paulinakaczmarek.pl/wp-content/uploads/2018/07/calendar-2428560_1920.jpg?resize=809%2C539&amp;ssl=1 809w, https://i0.wp.com/paulinakaczmarek.pl/wp-content/uploads/2018/07/calendar-2428560_1920.jpg?w=1920&amp;ssl=1 1920w, https://i0.wp.com/paulinakaczmarek.pl/wp-content/uploads/2018/07/calendar-2428560_1920.jpg?w=1280&amp;ssl=1 1280w" sizes="(max-width: 300px) 100vw, 300px"></p>
+<p>Dla uproszczenia skupi&#281; si&#281; na mniejszym przyk&#322;adzie i poszukam najwi&#281;kszej sumy z wymy&#347;lonej mniejszej liczby. W tym wypadku okienko b&#281;dzie mie&#347;ci&#322;o w sobie 4 cyfry.</p>
+<p>Algorytm wygl&#261;da tak:</p>
+<ol>
+<li>Wyliczamy pocz&#261;tkow&#261; sum&#281; w okienku (window_sum) &ndash; jest ona w tym momencie&nbsp;r&oacute;wnie&#380; maksymaln&#261; sum&#261; (max_sum)</li>
+<li>Przesuwamy okienko &ndash; wyliczamy kolejn&#261; sum&#281; korzystaj&#261;c z poprzednich&nbsp; wylicze&#324;:
+<ol>
+<li>od window_sum odejmujemy cyfr&#281;, kt&oacute;ra opu&#347;ci&#322;a okienko</li>
+<li>do window_sum dodajemy cyfr&#281;, kt&oacute;ra trafi&#322;a do okieka</li>
+</ol>
+</li>
+<li>Je&#347;li nowa suma jest wi&#281;ksza ni&#380; max_sum, to za max_sum przypisujemy window_sum</li>
+<li>Je&#347;li mamy jeszcze jakie&#347; cyfry w &bdquo;du&#380;ej liczbie&rdquo; to wracamy do punktu 2</li>
+</ol>
+<p>W formie graficznej wygl&#261;da to mniej wi&#281;cej tak:</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" data-attachment-id="3355" data-permalink="/projekt-euler-zadanie-8-window-sliding-technique/okienko1/" data-orig-file="https://i0.wp.com/paulinakaczmarek.pl/wp-content/uploads/2018/07/okienko1.png?fit=296%2C163&amp;ssl=1" data-orig-size="296,163" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="okienko1" data-image-description="" data-image-caption="" data-medium-file="https://i0.wp.com/paulinakaczmarek.pl/wp-content/uploads/2018/07/okienko1.png?fit=296%2C163&amp;ssl=1" data-large-file="https://i0.wp.com/paulinakaczmarek.pl/wp-content/uploads/2018/07/okienko1.png?fit=296%2C163&amp;ssl=1" class="size-full wp-image-3355 alignleft" src="https://i0.wp.com/paulinakaczmarek.pl/wp-content/uploads/2018/07/okienko1.png?resize=296%2C163&amp;ssl=1" alt="" width="296" height="163"><img data-recalc-dims="1" loading="lazy" decoding="async" data-attachment-id="3356" data-permalink="/projekt-euler-zadanie-8-window-sliding-technique/okienko2/" data-orig-file="https://i0.wp.com/paulinakaczmarek.pl/wp-content/uploads/2018/07/okienko2.png?fit=296%2C163&amp;ssl=1" data-orig-size="296,163" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="okienko2" data-image-description="" data-image-caption="" data-medium-file="https://i0.wp.com/paulinakaczmarek.pl/wp-content/uploads/2018/07/okienko2.png?fit=296%2C163&amp;ssl=1" data-large-file="https://i0.wp.com/paulinakaczmarek.pl/wp-content/uploads/2018/07/okienko2.png?fit=296%2C163&amp;ssl=1" class="size-full wp-image-3356 alignleft" src="https://i0.wp.com/paulinakaczmarek.pl/wp-content/uploads/2018/07/okienko2.png?resize=296%2C163&amp;ssl=1" alt="" width="296" height="163"> <img data-recalc-dims="1" loading="lazy" decoding="async" data-attachment-id="3357" data-permalink="/projekt-euler-zadanie-8-window-sliding-technique/okienko3/" data-orig-file="https://i0.wp.com/paulinakaczmarek.pl/wp-content/uploads/2018/07/okienko3.png?fit=296%2C163&amp;ssl=1" data-orig-size="296,163" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="okienko3" data-image-description="" data-image-caption="" data-medium-file="https://i0.wp.com/paulinakaczmarek.pl/wp-content/uploads/2018/07/okienko3.png?fit=296%2C163&amp;ssl=1" data-large-file="https://i0.wp.com/paulinakaczmarek.pl/wp-content/uploads/2018/07/okienko3.png?fit=296%2C163&amp;ssl=1" class="size-full wp-image-3357 alignleft" src="https://i0.wp.com/paulinakaczmarek.pl/wp-content/uploads/2018/07/okienko3.png?resize=296%2C163&amp;ssl=1" alt="" width="296" height="163"></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>A kod tak:</p>
+<style>.gist table { margin-bottom: 0; }</style>
+<div style="tab-size: 8" id="gist90495214" class="gist">
+<div class="gist-file" translate="no" data-color-mode="light" data-light-theme="light">
+<div class="gist-data">
+<div class="js-gist-file-update-container js-task-list-container">
+<div id="file-window_sliding_technique-py" class="file my-2">
+<div itemprop="text" class="Box-body p-0 blob-wrapper data type-python  " style="overflow: auto" tabindex="0" role="region" aria-label="window_sliding_technique.py content, created by jezinka on 05:24PM on July 02, 2018.">
+<div class="js-check-hidden-unicode js-blob-code-container blob-code-content">
+<p>  <template class="js-file-alert-template"></template></p>
+<div data-view-component="true" class="flash flash-warn flash-full d-flex flex-items-center">
+  <svg aria-hidden="true" height="16" viewbox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">
+    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
+</svg><br>
+    <span><br>
+      This file contains hidden or bidirectional Unicode text that may be interpreted or compiled differently than what appears below. To review, open the file in an editor that reveals hidden Unicode characters.<br>
+      <a class="Link--inTextBlock" href="https://github.co/hiddenchars" target="_blank">Learn more about bidirectional Unicode characters</a><br>
+    </span>
+<div data-view-component="true" class="flash-action">        <a href="/category/project-euler/%7B%7B%20revealButtonHref%20%7D%7D" data-view-component="true" class="btn-sm btn">    Show hidden characters<br>
+</a>
+</div>
+</div>
+<p><br>
+<template class="js-line-alert-template"><br>
+  <span aria-label="This line has hidden Unicode characters" data-view-component="true" class="line-alert tooltipped tooltipped-e"><br>
+    <svg aria-hidden="true" height="16" viewbox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">
+    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
+</svg><br>
+</span></template></p>
+<table data-hpc class="highlight tab-size js-file-line-container" data-tab-size="4" data-paste-markdown-skip data-tagsearch-path="window_sliding_technique.py">
+<tr>
+<td id="file-window_sliding_technique-py-L1" class="blob-num js-line-number js-blob-rnum" data-line-number="1"></td>
+<td id="file-window_sliding_technique-py-LC1" class="blob-code blob-code-inner js-file-line">large_number = '6717483933'</td>
+</tr>
+<tr>
+<td id="file-window_sliding_technique-py-L2" class="blob-num js-line-number js-blob-rnum" data-line-number="2"></td>
+<td id="file-window_sliding_technique-py-LC2" class="blob-code blob-code-inner js-file-line">large_number_array = list(map(int, large_number))</td>
+</tr>
+<tr>
+<td id="file-window_sliding_technique-py-L3" class="blob-num js-line-number js-blob-rnum" data-line-number="3"></td>
+<td id="file-window_sliding_technique-py-LC3" class="blob-code blob-code-inner js-file-line">
+</td>
+</tr>
+<tr>
+<td id="file-window_sliding_technique-py-L4" class="blob-num js-line-number js-blob-rnum" data-line-number="4"></td>
+<td id="file-window_sliding_technique-py-LC4" class="blob-code blob-code-inner js-file-line">
+</td>
+</tr>
+<tr>
+<td id="file-window_sliding_technique-py-L5" class="blob-num js-line-number js-blob-rnum" data-line-number="5"></td>
+<td id="file-window_sliding_technique-py-LC5" class="blob-code blob-code-inner js-file-line">def count_max_sum(window_size):</td>
+</tr>
+<tr>
+<td id="file-window_sliding_technique-py-L6" class="blob-num js-line-number js-blob-rnum" data-line-number="6"></td>
+<td id="file-window_sliding_technique-py-LC6" class="blob-code blob-code-inner js-file-line">    if len(large_number) &lt; window_size:</td>
+</tr>
+<tr>
+<td id="file-window_sliding_technique-py-L7" class="blob-num js-line-number js-blob-rnum" data-line-number="7"></td>
+<td id="file-window_sliding_technique-py-LC7" class="blob-code blob-code-inner js-file-line">        return -1</td>
+</tr>
+<tr>
+<td id="file-window_sliding_technique-py-L8" class="blob-num js-line-number js-blob-rnum" data-line-number="8"></td>
+<td id="file-window_sliding_technique-py-LC8" class="blob-code blob-code-inner js-file-line">
+</td>
+</tr>
+<tr>
+<td id="file-window_sliding_technique-py-L9" class="blob-num js-line-number js-blob-rnum" data-line-number="9"></td>
+<td id="file-window_sliding_technique-py-LC9" class="blob-code blob-code-inner js-file-line">    max_sum = 0</td>
+</tr>
+<tr>
+<td id="file-window_sliding_technique-py-L10" class="blob-num js-line-number js-blob-rnum" data-line-number="10"></td>
+<td id="file-window_sliding_technique-py-LC10" class="blob-code blob-code-inner js-file-line">    for i in range(0, window_size):</td>
+</tr>
+<tr>
+<td id="file-window_sliding_technique-py-L11" class="blob-num js-line-number js-blob-rnum" data-line-number="11"></td>
+<td id="file-window_sliding_technique-py-LC11" class="blob-code blob-code-inner js-file-line">        max_sum += large_number_array[i]</td>
+</tr>
+<tr>
+<td id="file-window_sliding_technique-py-L12" class="blob-num js-line-number js-blob-rnum" data-line-number="12"></td>
+<td id="file-window_sliding_technique-py-LC12" class="blob-code blob-code-inner js-file-line">
+</td>
+</tr>
+<tr>
+<td id="file-window_sliding_technique-py-L13" class="blob-num js-line-number js-blob-rnum" data-line-number="13"></td>
+<td id="file-window_sliding_technique-py-LC13" class="blob-code blob-code-inner js-file-line">    window_sum = max_sum</td>
+</tr>
+<tr>
+<td id="file-window_sliding_technique-py-L14" class="blob-num js-line-number js-blob-rnum" data-line-number="14"></td>
+<td id="file-window_sliding_technique-py-LC14" class="blob-code blob-code-inner js-file-line">    for i in range(window_size, len(large_number_array)):</td>
+</tr>
+<tr>
+<td id="file-window_sliding_technique-py-L15" class="blob-num js-line-number js-blob-rnum" data-line-number="15"></td>
+<td id="file-window_sliding_technique-py-LC15" class="blob-code blob-code-inner js-file-line">        window_sum += large_number_array[i] &ndash; large_number_array[i &ndash; window_size]</td>
+</tr>
+<tr>
+<td id="file-window_sliding_technique-py-L16" class="blob-num js-line-number js-blob-rnum" data-line-number="16"></td>
+<td id="file-window_sliding_technique-py-LC16" class="blob-code blob-code-inner js-file-line">        max_sum = max(max_sum, window_sum)</td>
+</tr>
+<tr>
+<td id="file-window_sliding_technique-py-L17" class="blob-num js-line-number js-blob-rnum" data-line-number="17"></td>
+<td id="file-window_sliding_technique-py-LC17" class="blob-code blob-code-inner js-file-line">    return max_sum</td>
+</tr>
+<tr>
+<td id="file-window_sliding_technique-py-L18" class="blob-num js-line-number js-blob-rnum" data-line-number="18"></td>
+<td id="file-window_sliding_technique-py-LC18" class="blob-code blob-code-inner js-file-line">
+</td>
+</tr>
+<tr>
+<td id="file-window_sliding_technique-py-L19" class="blob-num js-line-number js-blob-rnum" data-line-number="19"></td>
+<td id="file-window_sliding_technique-py-LC19" class="blob-code blob-code-inner js-file-line">
+</td>
+</tr>
+<tr>
+<td id="file-window_sliding_technique-py-L20" class="blob-num js-line-number js-blob-rnum" data-line-number="20"></td>
+<td id="file-window_sliding_technique-py-LC20" class="blob-code blob-code-inner js-file-line">print(count_max_sum(4))</td>
+</tr>
+</table>
+</div></div>
+</div>
+</div></div>
+<div class="gist-meta">
+        <a href="https://gist.github.com/jezinka/eaaed2eb8e8c3ea8041a49306deb4a84/raw/82995c5cd432723ad2789c8d6d58e78297993117/window_sliding_technique.py" style="float:right" class="Link--inTextBlock">view raw</a><br>
+        <a href="https://gist.github.com/jezinka/eaaed2eb8e8c3ea8041a49306deb4a84#file-window_sliding_technique-py" class="Link--inTextBlock"><br>
+          window_sliding_technique.py<br>
+        </a><br>
+        hosted with &#10084; by <a class="Link--inTextBlock" href="https://github.com/">GitHub</a>
+      </div>
+</div>
+</div>
+<p>Tutaj krok&oacute;w w p&#281;tli jest tyle ile wynosi d&#322;ugo&#347;&#263; &bdquo;du&#380;ej liczby&rdquo;, czyli z&#322;o&#380;ono&#347;&#263; czasowa O(n). Zupe&#322;nie nie zale&#380;y to od wielko&#347;ci okienka.</p>
+<p>Ok, ale to by&#322;o dodawanie, a w zadaniu ka&#380;&#261; znale&#378;&#263; najwi&#281;kszy iloczyn.</p>
+<p>Niestety nie mo&#380;na po prostu przenie&#347;&#263; wersji z dodawaniem na mno&#380;enie:</p>
+<style>.gist table { margin-bottom: 0; }</style>
+<div style="tab-size: 8" id="gist90546447" class="gist">
+<div class="gist-file" translate="no" data-color-mode="light" data-light-theme="light">
+<div class="gist-data">
+<div class="js-gist-file-update-container js-task-list-container">
+<div id="file-window_sliding_product-py" class="file my-2">
+<div itemprop="text" class="Box-body p-0 blob-wrapper data type-python  " style="overflow: auto" tabindex="0" role="region" aria-label="window_sliding_product.py content, created by jezinka on 04:42PM on July 04, 2018.">
+<div class="js-check-hidden-unicode js-blob-code-container blob-code-content">
+<p>  <template class="js-file-alert-template"></template></p>
+<div data-view-component="true" class="flash flash-warn flash-full d-flex flex-items-center">
+  <svg aria-hidden="true" height="16" viewbox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">
+    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
+</svg><br>
+    <span><br>
+      This file contains hidden or bidirectional Unicode text that may be interpreted or compiled differently than what appears below. To review, open the file in an editor that reveals hidden Unicode characters.<br>
+      <a class="Link--inTextBlock" href="https://github.co/hiddenchars" target="_blank">Learn more about bidirectional Unicode characters</a><br>
+    </span>
+<div data-view-component="true" class="flash-action">        <a href="/category/project-euler/%7B%7B%20revealButtonHref%20%7D%7D" data-view-component="true" class="btn-sm btn">    Show hidden characters<br>
+</a>
+</div>
+</div>
+<p><br>
+<template class="js-line-alert-template"><br>
+  <span aria-label="This line has hidden Unicode characters" data-view-component="true" class="line-alert tooltipped tooltipped-e"><br>
+    <svg aria-hidden="true" height="16" viewbox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">
+    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
+</svg><br>
+</span></template></p>
+<table data-hpc class="highlight tab-size js-file-line-container" data-tab-size="4" data-paste-markdown-skip data-tagsearch-path="window_sliding_product.py">
+<tr>
+<td id="file-window_sliding_product-py-L1" class="blob-num js-line-number js-blob-rnum" data-line-number="1"></td>
+<td id="file-window_sliding_product-py-LC1" class="blob-code blob-code-inner js-file-line">large_number = open(&quot;source.txt&quot;, 'r').read()</td>
+</tr>
+<tr>
+<td id="file-window_sliding_product-py-L2" class="blob-num js-line-number js-blob-rnum" data-line-number="2"></td>
+<td id="file-window_sliding_product-py-LC2" class="blob-code blob-code-inner js-file-line">large_number_array = list(map(int, str(large_number)))</td>
+</tr>
+<tr>
+<td id="file-window_sliding_product-py-L3" class="blob-num js-line-number js-blob-rnum" data-line-number="3"></td>
+<td id="file-window_sliding_product-py-LC3" class="blob-code blob-code-inner js-file-line">
+</td>
+</tr>
+<tr>
+<td id="file-window_sliding_product-py-L4" class="blob-num js-line-number js-blob-rnum" data-line-number="4"></td>
+<td id="file-window_sliding_product-py-LC4" class="blob-code blob-code-inner js-file-line">
+</td>
+</tr>
+<tr>
+<td id="file-window_sliding_product-py-L5" class="blob-num js-line-number js-blob-rnum" data-line-number="5"></td>
+<td id="file-window_sliding_product-py-LC5" class="blob-code blob-code-inner js-file-line">def find_max_product(k):</td>
+</tr>
+<tr>
+<td id="file-window_sliding_product-py-L6" class="blob-num js-line-number js-blob-rnum" data-line-number="6"></td>
+<td id="file-window_sliding_product-py-LC6" class="blob-code blob-code-inner js-file-line">    max_product = 1</td>
+</tr>
+<tr>
+<td id="file-window_sliding_product-py-L7" class="blob-num js-line-number js-blob-rnum" data-line-number="7"></td>
+<td id="file-window_sliding_product-py-LC7" class="blob-code blob-code-inner js-file-line">    for i in range(0, k):</td>
+</tr>
+<tr>
+<td id="file-window_sliding_product-py-L8" class="blob-num js-line-number js-blob-rnum" data-line-number="8"></td>
+<td id="file-window_sliding_product-py-LC8" class="blob-code blob-code-inner js-file-line">        max_product *= large_number_array[i]</td>
+</tr>
+<tr>
+<td id="file-window_sliding_product-py-L9" class="blob-num js-line-number js-blob-rnum" data-line-number="9"></td>
+<td id="file-window_sliding_product-py-LC9" class="blob-code blob-code-inner js-file-line">
+</td>
+</tr>
+<tr>
+<td id="file-window_sliding_product-py-L10" class="blob-num js-line-number js-blob-rnum" data-line-number="10"></td>
+<td id="file-window_sliding_product-py-LC10" class="blob-code blob-code-inner js-file-line">    window_product = max_product</td>
+</tr>
+<tr>
+<td id="file-window_sliding_product-py-L11" class="blob-num js-line-number js-blob-rnum" data-line-number="11"></td>
+<td id="file-window_sliding_product-py-LC11" class="blob-code blob-code-inner js-file-line">    for i in range(k, len(large_number_array)):</td>
+</tr>
+<tr>
+<td id="file-window_sliding_product-py-L12" class="blob-num js-line-number js-blob-rnum" data-line-number="12"></td>
+<td id="file-window_sliding_product-py-LC12" class="blob-code blob-code-inner js-file-line">        window_product = window_product // large_number_array[i &ndash; k] * large_number_array[i]</td>
+</tr>
+<tr>
+<td id="file-window_sliding_product-py-L13" class="blob-num js-line-number js-blob-rnum" data-line-number="13"></td>
+<td id="file-window_sliding_product-py-LC13" class="blob-code blob-code-inner js-file-line">        max_product = max(window_product, max_product)</td>
+</tr>
+<tr>
+<td id="file-window_sliding_product-py-L14" class="blob-num js-line-number js-blob-rnum" data-line-number="14"></td>
+<td id="file-window_sliding_product-py-LC14" class="blob-code blob-code-inner js-file-line">    return max_product</td>
+</tr>
+<tr>
+<td id="file-window_sliding_product-py-L15" class="blob-num js-line-number js-blob-rnum" data-line-number="15"></td>
+<td id="file-window_sliding_product-py-LC15" class="blob-code blob-code-inner js-file-line">
+</td>
+</tr>
+<tr>
+<td id="file-window_sliding_product-py-L16" class="blob-num js-line-number js-blob-rnum" data-line-number="16"></td>
+<td id="file-window_sliding_product-py-LC16" class="blob-code blob-code-inner js-file-line">
+</td>
+</tr>
+<tr>
+<td id="file-window_sliding_product-py-L17" class="blob-num js-line-number js-blob-rnum" data-line-number="17"></td>
+<td id="file-window_sliding_product-py-LC17" class="blob-code blob-code-inner js-file-line">assert find_max_product(4) == 5832</td>
+</tr>
+<tr>
+<td id="file-window_sliding_product-py-L18" class="blob-num js-line-number js-blob-rnum" data-line-number="18"></td>
+<td id="file-window_sliding_product-py-LC18" class="blob-code blob-code-inner js-file-line">print(find_max_product(13))</td>
+</tr>
+</table>
+</div></div>
+</div>
+</div></div>
+<div class="gist-meta">
+        <a href="https://gist.github.com/jezinka/ea40d83447e14713c9e4fd1e9e444b78/raw/cf9c6052ef6c3dda4045569af3e8220bfeb85b45/window_sliding_product.py" style="float:right" class="Link--inTextBlock">view raw</a><br>
+        <a href="https://gist.github.com/jezinka/ea40d83447e14713c9e4fd1e9e444b78#file-window_sliding_product-py" class="Link--inTextBlock"><br>
+          window_sliding_product.py<br>
+        </a><br>
+        hosted with &#10084; by <a class="Link--inTextBlock" href="https://github.com/">GitHub</a>
+      </div>
+</div>
+</div>
+<p>Bardzo szybko wypadnie error, &#380;e nie wolno dzieli&#263; przez 0.</p>
+<p>Pierwsze zabezpieczenie: sprawd&#378;my, czy nast&#281;pny element jest r&oacute;wny 0. Je&#347;li jest to przeskakujemy go i wyliczamy od nowa sum&#281; w okienku.</p>
+<style>.gist table { margin-bottom: 0; }</style>
+<div style="tab-size: 8" id="gist90546468" class="gist">
+<div class="gist-file" translate="no" data-color-mode="light" data-light-theme="light">
+<div class="gist-data">
+<div class="js-gist-file-update-container js-task-list-container">
+<div id="file-window_sliding_product-py" class="file my-2">
+<div itemprop="text" class="Box-body p-0 blob-wrapper data type-python  " style="overflow: auto" tabindex="0" role="region" aria-label="window_sliding_product.py content, created by jezinka on 04:43PM on July 04, 2018.">
+<div class="js-check-hidden-unicode js-blob-code-container blob-code-content">
+<p>  <template class="js-file-alert-template"></template></p>
+<div data-view-component="true" class="flash flash-warn flash-full d-flex flex-items-center">
+  <svg aria-hidden="true" height="16" viewbox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">
+    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
+</svg><br>
+    <span><br>
+      This file contains hidden or bidirectional Unicode text that may be interpreted or compiled differently than what appears below. To review, open the file in an editor that reveals hidden Unicode characters.<br>
+      <a class="Link--inTextBlock" href="https://github.co/hiddenchars" target="_blank">Learn more about bidirectional Unicode characters</a><br>
+    </span>
+<div data-view-component="true" class="flash-action">        <a href="/category/project-euler/%7B%7B%20revealButtonHref%20%7D%7D" data-view-component="true" class="btn-sm btn">    Show hidden characters<br>
+</a>
+</div>
+</div>
+<p><br>
+<template class="js-line-alert-template"><br>
+  <span aria-label="This line has hidden Unicode characters" data-view-component="true" class="line-alert tooltipped tooltipped-e"><br>
+    <svg aria-hidden="true" height="16" viewbox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">
+    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
+</svg><br>
+</span></template></p>
+<table data-hpc class="highlight tab-size js-file-line-container" data-tab-size="4" data-paste-markdown-skip data-tagsearch-path="window_sliding_product.py">
+<tr>
+<td id="file-window_sliding_product-py-L1" class="blob-num js-line-number js-blob-rnum" data-line-number="1"></td>
+<td id="file-window_sliding_product-py-LC1" class="blob-code blob-code-inner js-file-line">(&hellip;)</td>
+</tr>
+<tr>
+<td id="file-window_sliding_product-py-L2" class="blob-num js-line-number js-blob-rnum" data-line-number="2"></td>
+<td id="file-window_sliding_product-py-LC2" class="blob-code blob-code-inner js-file-line">        if next_item is not 0:</td>
+</tr>
+<tr>
+<td id="file-window_sliding_product-py-L3" class="blob-num js-line-number js-blob-rnum" data-line-number="3"></td>
+<td id="file-window_sliding_product-py-LC3" class="blob-code blob-code-inner js-file-line">            window_product = window_product // previous_item * next_item</td>
+</tr>
+<tr>
+<td id="file-window_sliding_product-py-L4" class="blob-num js-line-number js-blob-rnum" data-line-number="4"></td>
+<td id="file-window_sliding_product-py-LC4" class="blob-code blob-code-inner js-file-line">            i += 1</td>
+</tr>
+<tr>
+<td id="file-window_sliding_product-py-L5" class="blob-num js-line-number js-blob-rnum" data-line-number="5"></td>
+<td id="file-window_sliding_product-py-LC5" class="blob-code blob-code-inner js-file-line">        else:</td>
+</tr>
+<tr>
+<td id="file-window_sliding_product-py-L6" class="blob-num js-line-number js-blob-rnum" data-line-number="6"></td>
+<td id="file-window_sliding_product-py-LC6" class="blob-code blob-code-inner js-file-line">            i += 1</td>
+</tr>
+<tr>
+<td id="file-window_sliding_product-py-L7" class="blob-num js-line-number js-blob-rnum" data-line-number="7"></td>
+<td id="file-window_sliding_product-py-LC7" class="blob-code blob-code-inner js-file-line">            window_product = 1</td>
+</tr>
+<tr>
+<td id="file-window_sliding_product-py-L8" class="blob-num js-line-number js-blob-rnum" data-line-number="8"></td>
+<td id="file-window_sliding_product-py-LC8" class="blob-code blob-code-inner js-file-line">            if i + k &lt;= len(large_number_array):</td>
+</tr>
+<tr>
+<td id="file-window_sliding_product-py-L9" class="blob-num js-line-number js-blob-rnum" data-line-number="9"></td>
+<td id="file-window_sliding_product-py-LC9" class="blob-code blob-code-inner js-file-line">                for j in range(i, i + k):</td>
+</tr>
+<tr>
+<td id="file-window_sliding_product-py-L10" class="blob-num js-line-number js-blob-rnum" data-line-number="10"></td>
+<td id="file-window_sliding_product-py-LC10" class="blob-code blob-code-inner js-file-line">                    window_product *= large_number_array[j]</td>
+</tr>
+<tr>
+<td id="file-window_sliding_product-py-L11" class="blob-num js-line-number js-blob-rnum" data-line-number="11"></td>
+<td id="file-window_sliding_product-py-LC11" class="blob-code blob-code-inner js-file-line">            else:</td>
+</tr>
+<tr>
+<td id="file-window_sliding_product-py-L12" class="blob-num js-line-number js-blob-rnum" data-line-number="12"></td>
+<td id="file-window_sliding_product-py-LC12" class="blob-code blob-code-inner js-file-line">                break</td>
+</tr>
+<tr>
+<td id="file-window_sliding_product-py-L13" class="blob-num js-line-number js-blob-rnum" data-line-number="13"></td>
+<td id="file-window_sliding_product-py-LC13" class="blob-code blob-code-inner js-file-line">            i += k</td>
+</tr>
+<tr>
+<td id="file-window_sliding_product-py-L14" class="blob-num js-line-number js-blob-rnum" data-line-number="14"></td>
+<td id="file-window_sliding_product-py-LC14" class="blob-code blob-code-inner js-file-line">(&hellip;)</td>
+</tr>
+</table>
+</div></div>
+</div>
+</div></div>
+<div class="gist-meta">
+        <a href="https://gist.github.com/jezinka/89be6db2e2e153abe89601566f9fdb88/raw/ac2ca9eda4890c168871e2c20ddf4a8bc1554915/window_sliding_product.py" style="float:right" class="Link--inTextBlock">view raw</a><br>
+        <a href="https://gist.github.com/jezinka/89be6db2e2e153abe89601566f9fdb88#file-window_sliding_product-py" class="Link--inTextBlock"><br>
+          window_sliding_product.py<br>
+        </a><br>
+        hosted with &#10084; by <a class="Link--inTextBlock" href="https://github.com/">GitHub</a>
+      </div>
+</div>
+</div>
+<p>Prawie dobrze, ale co w wypadku je&#347;li w nowym okienku znajdzie si&#281; 0, a mo&#380;e nawet dwa, wi&#281;c omi&#324;my je wszystkie:</p>
+<style>.gist table { margin-bottom: 0; }</style>
+<div style="tab-size: 8" id="gist90495203" class="gist">
+<div class="gist-file" translate="no" data-color-mode="light" data-light-theme="light">
+<div class="gist-data">
+<div class="js-gist-file-update-container js-task-list-container">
+<div id="file-window_sliding_product-py" class="file my-2">
+<div itemprop="text" class="Box-body p-0 blob-wrapper data type-python  " style="overflow: auto" tabindex="0" role="region" aria-label="window_sliding_product.py content, created by jezinka on 05:23PM on July 02, 2018.">
+<div class="js-check-hidden-unicode js-blob-code-container blob-code-content">
+<p>  <template class="js-file-alert-template"></template></p>
+<div data-view-component="true" class="flash flash-warn flash-full d-flex flex-items-center">
+  <svg aria-hidden="true" height="16" viewbox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">
+    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
+</svg><br>
+    <span><br>
+      This file contains hidden or bidirectional Unicode text that may be interpreted or compiled differently than what appears below. To review, open the file in an editor that reveals hidden Unicode characters.<br>
+      <a class="Link--inTextBlock" href="https://github.co/hiddenchars" target="_blank">Learn more about bidirectional Unicode characters</a><br>
+    </span>
+<div data-view-component="true" class="flash-action">        <a href="/category/project-euler/%7B%7B%20revealButtonHref%20%7D%7D" data-view-component="true" class="btn-sm btn">    Show hidden characters<br>
+</a>
+</div>
+</div>
+<p><br>
+<template class="js-line-alert-template"><br>
+  <span aria-label="This line has hidden Unicode characters" data-view-component="true" class="line-alert tooltipped tooltipped-e"><br>
+    <svg aria-hidden="true" height="16" viewbox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">
+    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
+</svg><br>
+</span></template></p>
+<table data-hpc class="highlight tab-size js-file-line-container" data-tab-size="4" data-paste-markdown-skip data-tagsearch-path="window_sliding_product.py">
+<tr>
+<td id="file-window_sliding_product-py-L1" class="blob-num js-line-number js-blob-rnum" data-line-number="1"></td>
+<td id="file-window_sliding_product-py-LC1" class="blob-code blob-code-inner js-file-line">(&hellip;)</td>
+</tr>
+<tr>
+<td id="file-window_sliding_product-py-L2" class="blob-num js-line-number js-blob-rnum" data-line-number="2"></td>
+<td id="file-window_sliding_product-py-LC2" class="blob-code blob-code-inner js-file-line">            while 0 in large_number_array[i:i + k]:</td>
+</tr>
+<tr>
+<td id="file-window_sliding_product-py-L3" class="blob-num js-line-number js-blob-rnum" data-line-number="3"></td>
+<td id="file-window_sliding_product-py-LC3" class="blob-code blob-code-inner js-file-line">                zero_index = large_number_array[i:i + k].index(0)</td>
+</tr>
+<tr>
+<td id="file-window_sliding_product-py-L4" class="blob-num js-line-number js-blob-rnum" data-line-number="4"></td>
+<td id="file-window_sliding_product-py-LC4" class="blob-code blob-code-inner js-file-line">                i += zero_index + 1</td>
+</tr>
+<tr>
+<td id="file-window_sliding_product-py-L5" class="blob-num js-line-number js-blob-rnum" data-line-number="5"></td>
+<td id="file-window_sliding_product-py-LC5" class="blob-code blob-code-inner js-file-line">(&hellip;)</td>
+</tr>
+</table>
+</div></div>
+</div>
+</div></div>
+<div class="gist-meta">
+        <a href="https://gist.github.com/jezinka/17ade8dae2a318bba550710d3d009d5c/raw/eb51982c1fd1b2bc2dffd8ac4ba9d167359b7afb/window_sliding_product.py" style="float:right" class="Link--inTextBlock">view raw</a><br>
+        <a href="https://gist.github.com/jezinka/17ade8dae2a318bba550710d3d009d5c#file-window_sliding_product-py" class="Link--inTextBlock"><br>
+          window_sliding_product.py<br>
+        </a><br>
+        hosted with &#10084; by <a class="Link--inTextBlock" href="https://github.com/">GitHub</a>
+      </div>
+</div>
+</div>
+<p>Mo&#380;na by si&#281; jeszcze pokusi&#263; o sprawdzanie, czy w pierwszym okienku jest 0 i troch&#281; refaktoringu. Finalnie program wygl&#261;da tak:</p>
+<style>.gist table { margin-bottom: 0; }</style>
+<div style="tab-size: 8" id="gist90571760" class="gist">
+<div class="gist-file" translate="no" data-color-mode="light" data-light-theme="light">
+<div class="gist-data">
+<div class="js-gist-file-update-container js-task-list-container">
+<div id="file-8-py" class="file my-2">
+<div itemprop="text" class="Box-body p-0 blob-wrapper data type-python  " style="overflow: auto" tabindex="0" role="region" aria-label="8.py content, created by jezinka on 04:50PM on July 05, 2018.">
+<div class="js-check-hidden-unicode js-blob-code-container blob-code-content">
+<p>  <template class="js-file-alert-template"></template></p>
+<div data-view-component="true" class="flash flash-warn flash-full d-flex flex-items-center">
+  <svg aria-hidden="true" height="16" viewbox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">
+    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
+</svg><br>
+    <span><br>
+      This file contains hidden or bidirectional Unicode text that may be interpreted or compiled differently than what appears below. To review, open the file in an editor that reveals hidden Unicode characters.<br>
+      <a class="Link--inTextBlock" href="https://github.co/hiddenchars" target="_blank">Learn more about bidirectional Unicode characters</a><br>
+    </span>
+<div data-view-component="true" class="flash-action">        <a href="/category/project-euler/%7B%7B%20revealButtonHref%20%7D%7D" data-view-component="true" class="btn-sm btn">    Show hidden characters<br>
+</a>
+</div>
+</div>
+<p><br>
+<template class="js-line-alert-template"><br>
+  <span aria-label="This line has hidden Unicode characters" data-view-component="true" class="line-alert tooltipped tooltipped-e"><br>
+    <svg aria-hidden="true" height="16" viewbox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">
+    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
+</svg><br>
+</span></template></p>
+<table data-hpc class="highlight tab-size js-file-line-container" data-tab-size="4" data-paste-markdown-skip data-tagsearch-path="8.py">
+<tr>
+<td id="file-8-py-L1" class="blob-num js-line-number js-blob-rnum" data-line-number="1"></td>
+<td id="file-8-py-LC1" class="blob-code blob-code-inner js-file-line">large_number = open(&quot;source.txt&quot;, 'r').read()</td>
+</tr>
+<tr>
+<td id="file-8-py-L2" class="blob-num js-line-number js-blob-rnum" data-line-number="2"></td>
+<td id="file-8-py-LC2" class="blob-code blob-code-inner js-file-line">large_number_array = list(map(int, large_number))</td>
+</tr>
+<tr>
+<td id="file-8-py-L3" class="blob-num js-line-number js-blob-rnum" data-line-number="3"></td>
+<td id="file-8-py-LC3" class="blob-code blob-code-inner js-file-line">
+</td>
+</tr>
+<tr>
+<td id="file-8-py-L4" class="blob-num js-line-number js-blob-rnum" data-line-number="4"></td>
+<td id="file-8-py-LC4" class="blob-code blob-code-inner js-file-line">def find_max_product(window_size):</td>
+</tr>
+<tr>
+<td id="file-8-py-L5" class="blob-num js-line-number js-blob-rnum" data-line-number="5"></td>
+<td id="file-8-py-LC5" class="blob-code blob-code-inner js-file-line">    </td>
+</tr>
+<tr>
+<td id="file-8-py-L6" class="blob-num js-line-number js-blob-rnum" data-line-number="6"></td>
+<td id="file-8-py-LC6" class="blob-code blob-code-inner js-file-line">    if len(large_number_array) &lt; window_size:</td>
+</tr>
+<tr>
+<td id="file-8-py-L7" class="blob-num js-line-number js-blob-rnum" data-line-number="7"></td>
+<td id="file-8-py-LC7" class="blob-code blob-code-inner js-file-line">        return -1</td>
+</tr>
+<tr>
+<td id="file-8-py-L8" class="blob-num js-line-number js-blob-rnum" data-line-number="8"></td>
+<td id="file-8-py-LC8" class="blob-code blob-code-inner js-file-line">    </td>
+</tr>
+<tr>
+<td id="file-8-py-L9" class="blob-num js-line-number js-blob-rnum" data-line-number="9"></td>
+<td id="file-8-py-LC9" class="blob-code blob-code-inner js-file-line">    i = skip_zeros(0, window_size)</td>
+</tr>
+<tr>
+<td id="file-8-py-L10" class="blob-num js-line-number js-blob-rnum" data-line-number="10"></td>
+<td id="file-8-py-LC10" class="blob-code blob-code-inner js-file-line">    max_product = count_initial_product(i, window_size)</td>
+</tr>
+<tr>
+<td id="file-8-py-L11" class="blob-num js-line-number js-blob-rnum" data-line-number="11"></td>
+<td id="file-8-py-LC11" class="blob-code blob-code-inner js-file-line">
+</td>
+</tr>
+<tr>
+<td id="file-8-py-L12" class="blob-num js-line-number js-blob-rnum" data-line-number="12"></td>
+<td id="file-8-py-LC12" class="blob-code blob-code-inner js-file-line">    i += window_size</td>
+</tr>
+<tr>
+<td id="file-8-py-L13" class="blob-num js-line-number js-blob-rnum" data-line-number="13"></td>
+<td id="file-8-py-LC13" class="blob-code blob-code-inner js-file-line">    window_product = max_product</td>
+</tr>
+<tr>
+<td id="file-8-py-L14" class="blob-num js-line-number js-blob-rnum" data-line-number="14"></td>
+<td id="file-8-py-LC14" class="blob-code blob-code-inner js-file-line">    while i + window_size &lt;= len(large_number_array):</td>
+</tr>
+<tr>
+<td id="file-8-py-L15" class="blob-num js-line-number js-blob-rnum" data-line-number="15"></td>
+<td id="file-8-py-LC15" class="blob-code blob-code-inner js-file-line">        next_item = large_number_array[i]</td>
+</tr>
+<tr>
+<td id="file-8-py-L16" class="blob-num js-line-number js-blob-rnum" data-line-number="16"></td>
+<td id="file-8-py-LC16" class="blob-code blob-code-inner js-file-line">        previous_item = large_number_array[i &ndash; window_size]</td>
+</tr>
+<tr>
+<td id="file-8-py-L17" class="blob-num js-line-number js-blob-rnum" data-line-number="17"></td>
+<td id="file-8-py-LC17" class="blob-code blob-code-inner js-file-line">        if next_item is not 0:</td>
+</tr>
+<tr>
+<td id="file-8-py-L18" class="blob-num js-line-number js-blob-rnum" data-line-number="18"></td>
+<td id="file-8-py-LC18" class="blob-code blob-code-inner js-file-line">            window_product = window_product // previous_item * next_item</td>
+</tr>
+<tr>
+<td id="file-8-py-L19" class="blob-num js-line-number js-blob-rnum" data-line-number="19"></td>
+<td id="file-8-py-LC19" class="blob-code blob-code-inner js-file-line">            i += 1</td>
+</tr>
+<tr>
+<td id="file-8-py-L20" class="blob-num js-line-number js-blob-rnum" data-line-number="20"></td>
+<td id="file-8-py-LC20" class="blob-code blob-code-inner js-file-line">        else:</td>
+</tr>
+<tr>
+<td id="file-8-py-L21" class="blob-num js-line-number js-blob-rnum" data-line-number="21"></td>
+<td id="file-8-py-LC21" class="blob-code blob-code-inner js-file-line">            i = skip_zeros(i, window_size)</td>
+</tr>
+<tr>
+<td id="file-8-py-L22" class="blob-num js-line-number js-blob-rnum" data-line-number="22"></td>
+<td id="file-8-py-LC22" class="blob-code blob-code-inner js-file-line">            </td>
+</tr>
+<tr>
+<td id="file-8-py-L23" class="blob-num js-line-number js-blob-rnum" data-line-number="23"></td>
+<td id="file-8-py-LC23" class="blob-code blob-code-inner js-file-line">            if i + window_size &lt;= len(large_number_array):</td>
+</tr>
+<tr>
+<td id="file-8-py-L24" class="blob-num js-line-number js-blob-rnum" data-line-number="24"></td>
+<td id="file-8-py-LC24" class="blob-code blob-code-inner js-file-line">                window_product = count_initial_product(i, window_size)</td>
+</tr>
+<tr>
+<td id="file-8-py-L25" class="blob-num js-line-number js-blob-rnum" data-line-number="25"></td>
+<td id="file-8-py-LC25" class="blob-code blob-code-inner js-file-line">            else:</td>
+</tr>
+<tr>
+<td id="file-8-py-L26" class="blob-num js-line-number js-blob-rnum" data-line-number="26"></td>
+<td id="file-8-py-LC26" class="blob-code blob-code-inner js-file-line">                break</td>
+</tr>
+<tr>
+<td id="file-8-py-L27" class="blob-num js-line-number js-blob-rnum" data-line-number="27"></td>
+<td id="file-8-py-LC27" class="blob-code blob-code-inner js-file-line">            i += window_size</td>
+</tr>
+<tr>
+<td id="file-8-py-L28" class="blob-num js-line-number js-blob-rnum" data-line-number="28"></td>
+<td id="file-8-py-LC28" class="blob-code blob-code-inner js-file-line">        max_product = max(window_product, max_product)</td>
+</tr>
+<tr>
+<td id="file-8-py-L29" class="blob-num js-line-number js-blob-rnum" data-line-number="29"></td>
+<td id="file-8-py-LC29" class="blob-code blob-code-inner js-file-line">    return max_product</td>
+</tr>
+<tr>
+<td id="file-8-py-L30" class="blob-num js-line-number js-blob-rnum" data-line-number="30"></td>
+<td id="file-8-py-LC30" class="blob-code blob-code-inner js-file-line">
+</td>
+</tr>
+<tr>
+<td id="file-8-py-L31" class="blob-num js-line-number js-blob-rnum" data-line-number="31"></td>
+<td id="file-8-py-LC31" class="blob-code blob-code-inner js-file-line">
+</td>
+</tr>
+<tr>
+<td id="file-8-py-L32" class="blob-num js-line-number js-blob-rnum" data-line-number="32"></td>
+<td id="file-8-py-LC32" class="blob-code blob-code-inner js-file-line">def skip_zeros(i, window_size):</td>
+</tr>
+<tr>
+<td id="file-8-py-L33" class="blob-num js-line-number js-blob-rnum" data-line-number="33"></td>
+<td id="file-8-py-LC33" class="blob-code blob-code-inner js-file-line">    while 0 in large_number_array[i:i + window_size]:</td>
+</tr>
+<tr>
+<td id="file-8-py-L34" class="blob-num js-line-number js-blob-rnum" data-line-number="34"></td>
+<td id="file-8-py-LC34" class="blob-code blob-code-inner js-file-line">        zero_index = large_number_array[i:i + window_size].index(0)</td>
+</tr>
+<tr>
+<td id="file-8-py-L35" class="blob-num js-line-number js-blob-rnum" data-line-number="35"></td>
+<td id="file-8-py-LC35" class="blob-code blob-code-inner js-file-line">        i += zero_index + 1</td>
+</tr>
+<tr>
+<td id="file-8-py-L36" class="blob-num js-line-number js-blob-rnum" data-line-number="36"></td>
+<td id="file-8-py-LC36" class="blob-code blob-code-inner js-file-line">    return i</td>
+</tr>
+<tr>
+<td id="file-8-py-L37" class="blob-num js-line-number js-blob-rnum" data-line-number="37"></td>
+<td id="file-8-py-LC37" class="blob-code blob-code-inner js-file-line">
+</td>
+</tr>
+<tr>
+<td id="file-8-py-L38" class="blob-num js-line-number js-blob-rnum" data-line-number="38"></td>
+<td id="file-8-py-LC38" class="blob-code blob-code-inner js-file-line">
+</td>
+</tr>
+<tr>
+<td id="file-8-py-L39" class="blob-num js-line-number js-blob-rnum" data-line-number="39"></td>
+<td id="file-8-py-LC39" class="blob-code blob-code-inner js-file-line">def count_initial_product(i, window_size):</td>
+</tr>
+<tr>
+<td id="file-8-py-L40" class="blob-num js-line-number js-blob-rnum" data-line-number="40"></td>
+<td id="file-8-py-LC40" class="blob-code blob-code-inner js-file-line">    window_product = 1</td>
+</tr>
+<tr>
+<td id="file-8-py-L41" class="blob-num js-line-number js-blob-rnum" data-line-number="41"></td>
+<td id="file-8-py-LC41" class="blob-code blob-code-inner js-file-line">    for j in range(i, i + window_size):</td>
+</tr>
+<tr>
+<td id="file-8-py-L42" class="blob-num js-line-number js-blob-rnum" data-line-number="42"></td>
+<td id="file-8-py-LC42" class="blob-code blob-code-inner js-file-line">        window_product *= large_number_array[j]</td>
+</tr>
+<tr>
+<td id="file-8-py-L43" class="blob-num js-line-number js-blob-rnum" data-line-number="43"></td>
+<td id="file-8-py-LC43" class="blob-code blob-code-inner js-file-line">    return window_product</td>
+</tr>
+<tr>
+<td id="file-8-py-L44" class="blob-num js-line-number js-blob-rnum" data-line-number="44"></td>
+<td id="file-8-py-LC44" class="blob-code blob-code-inner js-file-line">
+</td>
+</tr>
+<tr>
+<td id="file-8-py-L45" class="blob-num js-line-number js-blob-rnum" data-line-number="45"></td>
+<td id="file-8-py-LC45" class="blob-code blob-code-inner js-file-line">
+</td>
+</tr>
+<tr>
+<td id="file-8-py-L46" class="blob-num js-line-number js-blob-rnum" data-line-number="46"></td>
+<td id="file-8-py-LC46" class="blob-code blob-code-inner js-file-line">assert find_max_product(4) == 5832</td>
+</tr>
+<tr>
+<td id="file-8-py-L47" class="blob-num js-line-number js-blob-rnum" data-line-number="47"></td>
+<td id="file-8-py-LC47" class="blob-code blob-code-inner js-file-line">print(find_max_product(13))</td>
+</tr>
+</table>
+</div></div>
+</div>
+</div></div>
+<div class="gist-meta">
+        <a href="https://gist.github.com/jezinka/450b279358d823e559a775590806d95e/raw/0076f327c6136a52b57f13fae6f627528fc7f6c6/8.py" style="float:right" class="Link--inTextBlock">view raw</a><br>
+        <a href="https://gist.github.com/jezinka/450b279358d823e559a775590806d95e#file-8-py" class="Link--inTextBlock"><br>
+          8.py<br>
+        </a><br>
+        hosted with &#10084; by <a class="Link--inTextBlock" href="https://github.com/">GitHub</a>
+      </div>
+</div>
+</div>
+<p>Wi&#281;cej zada&#324;, kt&oacute;re mo&#380;na rozwi&#261;za&#263; przy pomocy tej techniki mo&#380;na znale&#378;&#263; tu:&nbsp;<a href="https://www.geeksforgeeks.org/tag/sliding-window/">https://www.geeksforgeeks.org/tag/sliding-window/</a></p>
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+		<span class="cat-links">Posted in <a href="/category/project-euler/" rel="category tag">project euler</a></span><span class="tags-links">Tagged <a href="/tag/python/" rel="tag">python</a>, <a href="/tag/project-euler/" rel="tag">project euler</a>, <a href="/tag/sliding-window-technique/" rel="tag">sliding window technique</a></span><span class="comments-link"><a href="/projekt-euler-zadanie-8-window-sliding-technique/#respond">Leave a Comment<span class="screen-reader-text"> on Projekt Euler &ndash; zadanie 8 &ndash; Window sliding technique</span></a></span>	</footer><!-- .entry-footer -->
+</article><!-- #post-3349 -->
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+
+<aside id="secondary" class="widget-area col-lg-4">
+	<section id="search-2" class="widget widget_search"><form role="search" method="get" class="io-search-form form-row" action="/">
+        <div class="form-group col-lg-8">
+            <input type="text" class="search-field form-control" placeholder="Search &hellip;" value="" name="s">
+        </div><!-- /.col-sm-2 -->
+        <div class="form-group col-lg-4">
+            <input type="submit" class="submit btn btn-primary btn-block" value="Search">
+        </div><!-- /.col-sm-2 -->
+</form></section>
+		<section id="recent-posts-2" class="widget widget_recent_entries">
+		<h2 class="widget-title">Ostatnie wpisy</h2>
+		<ul>
+											<li>
+					<a href="/groovy-sudoku-backtracking-ostatnie-starcie/">[groovy] Sudoku Backtracking &ndash; ostatnie starcie</a>
+									</li>
+											<li>
+					<a href="/clob-in-clob-out-grails-sql/">CLOB in &ndash; CLOB out -&gt; Grails + SQL</a>
+									</li>
+											<li>
+					<a href="/sensorki-serverless-app-i-refaktoring-9/">Sensorki &ndash; Serverless app i refaktoring &ndash; #9</a>
+									</li>
+											<li>
+					<a href="/sudoku-solver-tym-razem-nie-wyszlo-post-mortem/">&bdquo;Sudoku solver&rdquo; &ndash; tym razem nie wysz&#322;o &ndash; post mortem</a>
+									</li>
+											<li>
+					<a href="/sensorki-podsumowanie-7/">Sensorki &ndash; podsumowanie &ndash; #8</a>
+									</li>
+					</ul>
+
+		</section><section id="recent-comments-2" class="widget widget_recent_comments"><h2 class="widget-title">Najnowsze komentarze</h2><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">paulinakaczmarek</span> - <a href="/sensorki-aplikacja-pogodowa-0/#comment-83">Sensorki &ndash; aplikacja &bdquo;pogodowa&rdquo; &ndash; #0</a></li><li class="recentcomments"><span class="comment-author-link"><a href="http://github.com/users/ghostbuster91" class="url" rel="ugc external nofollow">Kasper</a></span> - <a href="/sensorki-aplikacja-pogodowa-0/#comment-82">Sensorki &ndash; aplikacja &bdquo;pogodowa&rdquo; &ndash; #0</a></li><li class="recentcomments"><span class="comment-author-link"><a href="https://paulinakaczmarek.wordpress.com/kobieta-w-it-programistka/" class="url" rel="ugc external nofollow">Kobieta w IT != programistka &ndash; #1B &ndash; Paulina's Sandbox</a></span> - <a href="/kobieta-w-it-programistka-1d/#comment-31">Kobieta w IT == programistka &ndash; #1D</a></li><li class="recentcomments"><span class="comment-author-link">kjgm</span> - <a href="/python-challenge-00/#comment-35">Python Challenge &ndash; #00</a></li><li class="recentcomments"><span class="comment-author-link"><a href="https://plus.google.com/113840959268978039398" class="url" rel="ugc external nofollow">de9ka</a></span> - <a href="/conaobiad-release-wersji-alpha-23/#comment-34">CoNaObiad &ndash; release wersji alpha &ndash; #23</a></li></ul></section><section id="archives-2" class="widget widget_archive"><h2 class="widget-title">Archiwa</h2>
+			<ul>
+					<li><a href="/2020/05/">maj 2020</a></li>
+	<li><a href="/2019/04/">kwiecie&#324; 2019</a></li>
+	<li><a href="/2019/02/">luty 2019</a></li>
+	<li><a href="/2018/10/">pa&#378;dziernik 2018</a></li>
+	<li><a href="/2018/08/">sierpie&#324; 2018</a></li>
+	<li><a href="/2018/07/">lipiec 2018</a></li>
+	<li><a href="/2018/04/">kwiecie&#324; 2018</a></li>
+	<li><a href="/2018/03/">marzec 2018</a></li>
+	<li><a href="/2018/01/">stycze&#324; 2018</a></li>
+	<li><a href="/2017/12/">grudzie&#324; 2017</a></li>
+	<li><a href="/2017/11/">listopad 2017</a></li>
+	<li><a href="/2017/10/">pa&#378;dziernik 2017</a></li>
+	<li><a href="/2017/09/">wrzesie&#324; 2017</a></li>
+	<li><a href="/2017/08/">sierpie&#324; 2017</a></li>
+	<li><a href="/2017/07/">lipiec 2017</a></li>
+	<li><a href="/2017/06/">czerwiec 2017</a></li>
+	<li><a href="/2017/05/">maj 2017</a></li>
+	<li><a href="/2017/04/">kwiecie&#324; 2017</a></li>
+	<li><a href="/2017/03/">marzec 2017</a></li>
+			</ul>
+
+			</section><section id="categories-2" class="widget widget_categories"><h2 class="widget-title">Kategorie</h2>
+			<ul>
+					<li class="cat-item cat-item-173"><a href="/category/bez_kodu/">Bez kodu</a>
+</li>
+	<li class="cat-item cat-item-162"><a href="/category/chaos/">Chaos</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="/category/conaobiad/">CoNaObiad</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="/category/daj-sie-poznac-2017/">Daj Si&#281; Pozna&#263; 2017</a>
+</li>
+	<li class="cat-item cat-item-137"><a href="/category/nanodegree/">Google Udacity Scholarship</a>
+</li>
+	<li class="cat-item cat-item-145"><a href="/category/groovy/">groovy</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="/category/kotlin/">kotlin</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="/category/ksiazki/">ksi&#261;&#380;ki</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="/category/odjazd/">Odjazd</a>
+</li>
+	<li class="cat-item cat-item-141 current-cat"><a aria-current="page" href="/category/project-euler/">project euler</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="/category/python-challenge/">python challenge</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="/category/refaktoring-kodu/">Refaktoring kodu</a>
+</li>
+	<li class="cat-item cat-item-152"><a href="/category/sensorki/">sensorki</a>
+</li>
+	<li class="cat-item cat-item-189"><a href="/category/sudoku/">sudoku</a>
+</li>
+			</ul>
+
+			</section></aside><!-- #secondary -->
+
+	</div><!-- #content -->
+
+	<footer id="colophon" class="site-footer row">
+		<div class="site-info col">
+			<a href="https://wordpress.org/">
+				Proudly powered by WordPress			</a>
+			<span class="sep"> | </span>
+				Theme: ioboot by <a href="http://iotheme.com/">ioTheme</a>.		</div><!-- .site-info col -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+				<script type='text/javascript'><!--
+			var seriesdropdown = document.getElementById("orgseries_dropdown");
+			if (seriesdropdown) {
+			 function onSeriesChange() {
+					if ( seriesdropdown.options[seriesdropdown.selectedIndex].value != ( 0 || -1 ) ) {
+						location.href = "/series/"+seriesdropdown.options[seriesdropdown.selectedIndex].value;
+					}
+				}
+				seriesdropdown.onchange = onSeriesChange;
+			}
+			--></script>
+			    <div class="jlplg-lovecoding-cookie-info-container jlplg-hidden" style="--jlplg-buton-bg-color: #dcf1ff; background-color: #444546; bottom: 0" id="jlplg-lovecoding-cookie-info-container">
+        <form method="post" id="cookie-form"> 
+            <p class="jlplg-lovecoding-cookie-info" style="color: #ffffff">We use cookies to improve your experience on our website. By browsing this website, you agree to our use of cookies</p>
+            <div class="jlplg-lovecoding-buttons">
+            <button type="submit" name="jlplg-cookie-accept-button" class="jlplg-lovecoding-cookie-accept-button" id="cookie-accept-button" style="background-color: #dcf1ff" data-expire="30">
+                <span class="button-text" style="color: #000000">Accept Cookies</span>
+            </button>
+                        </div>
+        </form>
+    </div>
+		<div id="jp-carousel-loading-overlay">
+			<div id="jp-carousel-loading-wrapper">
+				<span id="jp-carousel-library-loading">&nbsp;</span>
+			</div>
+		</div>
+		<div class="jp-carousel-overlay" style="display: none;">
+
+		<div class="jp-carousel-container">
+			<!-- The Carousel Swiper -->
+			<div class="jp-carousel-wrap swiper jp-carousel-swiper-container jp-carousel-transitions" itemscope itemtype="https://schema.org/ImageGallery">
+				<div class="jp-carousel swiper-wrapper"></div>
+				<div class="jp-swiper-button-prev swiper-button-prev">
+					<svg width="25" height="24" viewbox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<mask id="maskPrev" mask-type="alpha" maskunits="userSpaceOnUse" x="8" y="6" width="9" height="12">
+							<path d="M16.2072 16.59L11.6496 12L16.2072 7.41L14.8041 6L8.8335 12L14.8041 18L16.2072 16.59Z" fill="white"></path>
+						</mask>
+						<g mask="url(#maskPrev)">
+							<rect x="0.579102" width="23.8823" height="24" fill="#FFFFFF"></rect>
+						</g>
+					</svg>
+				</div>
+				<div class="jp-swiper-button-next swiper-button-next">
+					<svg width="25" height="24" viewbox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<mask id="maskNext" mask-type="alpha" maskunits="userSpaceOnUse" x="8" y="6" width="8" height="12">
+							<path d="M8.59814 16.59L13.1557 12L8.59814 7.41L10.0012 6L15.9718 12L10.0012 18L8.59814 16.59Z" fill="white"></path>
+						</mask>
+						<g mask="url(#maskNext)">
+							<rect x="0.34375" width="23.8822" height="24" fill="#FFFFFF"></rect>
+						</g>
+					</svg>
+				</div>
+			</div>
+			<!-- The main close buton -->
+			<div class="jp-carousel-close-hint">
+				<svg width="25" height="24" viewbox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<mask id="maskClose" mask-type="alpha" maskunits="userSpaceOnUse" x="5" y="5" width="15" height="14">
+						<path d="M19.3166 6.41L17.9135 5L12.3509 10.59L6.78834 5L5.38525 6.41L10.9478 12L5.38525 17.59L6.78834 19L12.3509 13.41L17.9135 19L19.3166 17.59L13.754 12L19.3166 6.41Z" fill="white"></path>
+					</mask>
+					<g mask="url(#maskClose)">
+						<rect x="0.409668" width="23.8823" height="24" fill="#FFFFFF"></rect>
+					</g>
+				</svg>
+			</div>
+			<!-- Image info, comments and meta -->
+			<div class="jp-carousel-info">
+				<div class="jp-carousel-info-footer">
+					<div class="jp-carousel-pagination-container">
+						<div class="jp-swiper-pagination swiper-pagination"></div>
+						<div class="jp-carousel-pagination"></div>
+					</div>
+					<div class="jp-carousel-photo-title-container">
+						<h2 class="jp-carousel-photo-caption"></h2>
+					</div>
+					<div class="jp-carousel-photo-icons-container">
+						<a href="#" class="jp-carousel-icon-btn jp-carousel-icon-info" aria-label="Toggle photo metadata visibility">
+							<span class="jp-carousel-icon">
+								<svg width="25" height="24" viewbox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<mask id="maskInfo" mask-type="alpha" maskunits="userSpaceOnUse" x="2" y="2" width="21" height="20">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M12.7537 2C7.26076 2 2.80273 6.48 2.80273 12C2.80273 17.52 7.26076 22 12.7537 22C18.2466 22 22.7046 17.52 22.7046 12C22.7046 6.48 18.2466 2 12.7537 2ZM11.7586 7V9H13.7488V7H11.7586ZM11.7586 11V17H13.7488V11H11.7586ZM4.79292 12C4.79292 16.41 8.36531 20 12.7537 20C17.142 20 20.7144 16.41 20.7144 12C20.7144 7.59 17.142 4 12.7537 4C8.36531 4 4.79292 7.59 4.79292 12Z" fill="white"></path>
+									</mask>
+									<g mask="url(#maskInfo)">
+										<rect x="0.8125" width="23.8823" height="24" fill="#FFFFFF"></rect>
+									</g>
+								</svg>
+							</span>
+						</a>
+												<a href="#" class="jp-carousel-icon-btn jp-carousel-icon-comments" aria-label="Toggle photo comments visibility">
+							<span class="jp-carousel-icon">
+								<svg width="25" height="24" viewbox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<mask id="maskComments" mask-type="alpha" maskunits="userSpaceOnUse" x="2" y="2" width="21" height="20">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M4.3271 2H20.2486C21.3432 2 22.2388 2.9 22.2388 4V16C22.2388 17.1 21.3432 18 20.2486 18H6.31729L2.33691 22V4C2.33691 2.9 3.2325 2 4.3271 2ZM6.31729 16H20.2486V4H4.3271V18L6.31729 16Z" fill="white"></path>
+									</mask>
+									<g mask="url(#maskComments)">
+										<rect x="0.34668" width="23.8823" height="24" fill="#FFFFFF"></rect>
+									</g>
+								</svg>
+
+								<span class="jp-carousel-has-comments-indicator" aria-label="This image has comments."></span>
+							</span>
+						</a>
+											</div>
+				</div>
+				<div class="jp-carousel-info-extra">
+					<div class="jp-carousel-info-content-wrapper">
+						<div class="jp-carousel-photo-title-container">
+							<h2 class="jp-carousel-photo-title"></h2>
+						</div>
+						<div class="jp-carousel-comments-wrapper">
+															<div id="jp-carousel-comments-loading">
+									<span>Loading Comments...</span>
+								</div>
+								<div class="jp-carousel-comments"></div>
+								<div id="jp-carousel-comment-form-container">
+									<span id="jp-carousel-comment-form-spinner">&nbsp;</span>
+									<div id="jp-carousel-comment-post-results"></div>
+																														<form id="jp-carousel-comment-form">
+												<label for="jp-carousel-comment-form-comment-field" class="screen-reader-text">Write a Comment...</label>
+												<textarea name="comment" class="jp-carousel-comment-form-field jp-carousel-comment-form-textarea" id="jp-carousel-comment-form-comment-field" placeholder="Write a Comment..."></textarea>
+												<div id="jp-carousel-comment-form-submit-and-info-wrapper">
+													<div id="jp-carousel-comment-form-commenting-as">
+																													<fieldset>
+																<label for="jp-carousel-comment-form-email-field">Email (Required)</label>
+																<input type="text" name="email" class="jp-carousel-comment-form-field jp-carousel-comment-form-text-field" id="jp-carousel-comment-form-email-field">
+															</fieldset>
+															<fieldset>
+																<label for="jp-carousel-comment-form-author-field">Name (Required)</label>
+																<input type="text" name="author" class="jp-carousel-comment-form-field jp-carousel-comment-form-text-field" id="jp-carousel-comment-form-author-field">
+															</fieldset>
+															<fieldset>
+																<label for="jp-carousel-comment-form-url-field">Website</label>
+																<input type="text" name="url" class="jp-carousel-comment-form-field jp-carousel-comment-form-text-field" id="jp-carousel-comment-form-url-field">
+															</fieldset>
+																											</div>
+													<input type="submit" name="submit" class="jp-carousel-comment-form-button" id="jp-carousel-comment-form-button-submit" value="Post Comment">
+												</div>
+											</form>
+																											</div>
+													</div>
+						<div class="jp-carousel-image-meta">
+							<div class="jp-carousel-title-and-caption">
+								<div class="jp-carousel-photo-info">
+									<h3 class="jp-carousel-caption" itemprop="caption description"></h3>
+								</div>
+
+								<div class="jp-carousel-photo-description"></div>
+							</div>
+							<ul class="jp-carousel-image-exif" style="display: none;"></ul>
+							<a class="jp-carousel-image-download" href="#" target="_blank" style="display: none;">
+								<svg width="25" height="24" viewbox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<mask id="mask0" mask-type="alpha" maskunits="userSpaceOnUse" x="3" y="3" width="19" height="18">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M5.84615 5V19H19.7775V12H21.7677V19C21.7677 20.1 20.8721 21 19.7775 21H5.84615C4.74159 21 3.85596 20.1 3.85596 19V5C3.85596 3.9 4.74159 3 5.84615 3H12.8118V5H5.84615ZM14.802 5V3H21.7677V10H19.7775V6.41L9.99569 16.24L8.59261 14.83L18.3744 5H14.802Z" fill="white"></path>
+									</mask>
+									<g mask="url(#mask0)">
+										<rect x="0.870605" width="23.8823" height="24" fill="#FFFFFF"></rect>
+									</g>
+								</svg>
+								<span class="jp-carousel-download-text"></span>
+							</a>
+							<div class="jp-carousel-image-map" style="display: none;"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		</div>
+		<link rel="stylesheet" id="jetpack-gist-styling-css" href="https://github.githubassets.com/assets/gist-embed-59543e005c9c.css?ver=14.9.1" type="text/css" media="all">
+<link rel="stylesheet" id="jetpack-swiper-library-css" href="/wp-content/plugins/jetpack/_inc/blocks/swiper.css?ver=14.9.1" type="text/css" media="all">
+<link rel="stylesheet" id="jetpack-carousel-css" href="/wp-content/plugins/jetpack/modules/carousel/jetpack-carousel.css?ver=14.9.1" type="text/css" media="all">
+<script type="text/javascript" src="/wp-content/plugins/simple-cookie-notice/public/js/jlplg_lovecoding_script.js?ver=1755066037" id="jlplg_lovecoding_script-js"></script>
+<script type="text/javascript" src="/wp-content/themes/ioboot/js/skip-link-focus-fix.js?ver=20151215" id="ioboot-skip-link-focus-fix-js"></script>
+<script type="text/javascript" src="/wp-content/themes/ioboot/js/bootstrap.js?ver=6.x.x" id="ioboot-bootstrap-js-js"></script>
+<script type="text/javascript" src="/wp-content/themes/ioboot/js/custom.js?ver=1.0.0" id="ioboot-custom-js-js"></script>
+<script type="text/javascript" id="jetpack-stats-js-before">
+/* <![CDATA[ */
+_stq = window._stq || [];
+_stq.push([ "view", JSON.parse("{\"v\":\"ext\",\"blog\":\"143895758\",\"post\":\"0\",\"tz\":\"2\",\"srv\":\"paulinakaczmarek.pl\",\"arch_cat\":\"project-euler\",\"arch_results\":\"1\",\"j\":\"1:14.9.1\"}") ]);
+_stq.push([ "clickTrackerInit", "143895758", "0" ]);
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://stats.wp.com/e-202533.js" id="jetpack-stats-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" id="jetpack-carousel-js-extra">
+/* <![CDATA[ */
+var jetpackSwiperLibraryPath = {"url":"\/wp-content\/plugins\/jetpack\/_inc\/blocks\/swiper.js"};
+var jetpackCarouselStrings = {"widths":[370,700,1000,1200,1400,2000],"is_logged_in":"","lang":"pl","ajaxurl":"\/wp-admin\/admin-ajax.php","nonce":"df746c1287","display_exif":"1","display_comments":"1","single_image_gallery":"1","single_image_gallery_media_file":"","background_color":"black","comment":"Comment","post_comment":"Post Comment","write_comment":"Write a Comment...","loading_comments":"Loading Comments...","image_label":"Open image in full-screen.","download_original":"View full size <span class=\"photo-size\">{0}<span class=\"photo-size-times\">\u00d7<\/span>{1}<\/span>","no_comment_text":"Please be sure to submit some text with your comment.","no_comment_email":"Please provide an email address to comment.","no_comment_author":"Please provide your name to comment.","comment_post_error":"Sorry, but there was an error posting your comment. Please try again later.","comment_approved":"Your comment was approved.","comment_unapproved":"Your comment is in moderation.","camera":"Camera","aperture":"Aperture","shutter_speed":"Shutter Speed","focal_length":"Focal Length","copyright":"Copyright","comment_registration":"0","require_name_email":"1","login_url":"\/wp-login.php?redirect_to=%2Fprojekt-euler-zadanie-8-window-sliding-technique%2F","blog_id":"1","meta_data":["camera","aperture","shutter_speed","focal_length","copyright"]};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wp-content/plugins/jetpack/_inc/build/carousel/jetpack-carousel.min.js?ver=14.9.1" id="jetpack-carousel-js"></script>
+
+</body>
+</html>
